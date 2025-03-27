@@ -1,7 +1,13 @@
 <template>
-  <div class="about">
+  <section class="about">
     <h1>This is an about page</h1>
-  </div>
+    <p>Small paragraph about me</p>
+    <div>A photo</div>
+    <div>My role as swim coach and why (past career)</div>
+    <form>
+      contact me form
+    </form>
+  </section>
 </template>
 
 <style>
