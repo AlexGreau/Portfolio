@@ -2,12 +2,8 @@
 Repo dedicated to a digital presentation of me, easy to share and giving a small peek into my skills and personality.  
 I chose Vue3 and typescript because it's a stack easily transferrable into my current work (Vue2) : what i learn here can be directly applied to my work and vice-versa. 
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
 ## Project Setup
-
+ 
 ```sh
 npm install
 ```
