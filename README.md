@@ -1,6 +1,7 @@
 # Portfolio
-Repo dedicated to a digital presentation of me, easy to share and giving a small peek into my skills and personality.  
-I chose Vue3 and typescript because it's a stack easily transferrable into my current work (Vue2) : what i learn here can be directly applied to my work and vice-versa. 
+[Material Web from Google](https://github.com/material-components/material-web)
+I chose Vue3 and typescript because it's a stack easily transferrable into my current work (Vue2): what i learn here can be directly applied to my work and vice-versa.
+I also use this project to explore [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
 
 ## Project Setup
  

@@ -4,8 +4,12 @@
   <Footer />
 </template>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+#app { // id used in mains.ts to mount
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 </style>
 
 <script setup lang="ts">
