@@ -6,21 +6,17 @@
         <p>Welcome to my portfolio! I'm a passionate developer.<br/>
         Here you can find my projects, skills, and more about me.<br/>
         Feel free to explore and reach out if you have any questions!</p>
+        <ul>
+          <li>Get my resume</li>
+          <li>Hire me (link to either a form or mailto)</li>
+          <li>Checkout my github</li>
+          <li>Explore my linkedin</li>
+        </ul>
       </div>
       <figure>
         <img src="../assets/img/me.jpg" alt="Alex Greau" />
         <figcaption>This website's creator</figcaption>
       </figure>    
-    </section>
-    <section>
-      Small intro / Hero content, name title,
-      <p>Short Tagline (e.g., "Building sleek, high-performance UIs with Vue.js & TailwindCSS")</p> 
-      <ul>
-        <li>Get my resume</li>
-        <li>Hire me (link to either a form or mailto)</li>
-        <li>Checkout my github</li>
-        <li>Explore my linkedin</li>
-      </ul>
     </section>
     <section>
       Projects ? Cards with projects and ideas, no need codes yet, just show that you have ideas and executing them
@@ -61,6 +57,7 @@
     margin-bottom: 20px;
     figure {
       margin-top: 20px;
+      text-align: center;
       img {
         max-width: 300px;
         height: auto;
