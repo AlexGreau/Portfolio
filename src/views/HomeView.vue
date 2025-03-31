@@ -8,9 +8,22 @@
         Feel free to explore and reach out if you have any questions!</p>
         <ul>
           <li>Get my resume</li>
-          <li>Hire me (link to either a form or mailto)</li>
-          <li>Checkout my github</li>
-          <li>Explore my linkedin</li>
+          <li>
+            <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">
+              Hire me
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/AlexGreau" target="_blank">
+              <img src="../assets/icons/github.svg" alt="GitHub"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alexandre-greau/" target="_blank">
+              <img src="../assets/icons/linkedin.svg" alt="LinkedIn"/>
+            </a>
+          </li>
+          <li></li>
         </ul>
       </div>
       <figure>
@@ -66,6 +79,19 @@
       figcaption {
         font-size: 0.9rem;
         color: #666;
+      }
+    }
+    ul {
+      display: flex;
+      gap: 6px;
+      li {
+        display: inline;
+        a {
+          img {
+            height: 20px;
+            width: auto;
+          }
+        }
       }
     }
   }
