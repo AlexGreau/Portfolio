@@ -55,3 +55,6 @@ npm run lint
 The font was selected via [Google fonts](https://fonts.google.com/selection), with the wish of having something calm but active and easy to read.
 
 The color theme was used following the [material them builder](https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder). I chose dark blue as it links my swimming passion and the values I want to communicate here.
+
+## Components
+For this project i want to experiemtn a little bit with webcomponent and will use the [Google Web components](https://material-web.dev/about/intro/)
