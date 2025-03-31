@@ -28,7 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+package-lock.json
 
 test-results/
 playwright-report/
-package-lock.json

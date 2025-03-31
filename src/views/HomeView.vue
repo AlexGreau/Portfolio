@@ -1,5 +1,17 @@
 <template>
-  <main>
+  <main class="main-wrapper">
+    <section class="hero-wrapper">
+      <div>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my portfolio! I'm a passionate developer.<br/>
+        Here you can find my projects, skills, and more about me.<br/>
+        Feel free to explore and reach out if you have any questions!</p>
+      </div>
+      <figure>
+        <img src="../assets/img/me.jpg" alt="Alex Greau" />
+        <figcaption>This website's creator</figcaption>
+      </figure>    
+    </section>
     <section>
       Small intro / Hero content, name title,
       <p>Short Tagline (e.g., "Building sleek, high-performance UIs with Vue.js & TailwindCSS")</p> 
@@ -32,4 +44,36 @@
 </template>
 <script setup lang="ts">
 </script>
+
+<style lang="scss">
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  & > section.hero-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    figure {
+      margin-top: 20px;
+      img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+      }
+      figcaption {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+  }
+}
+
+
+</style>
 
