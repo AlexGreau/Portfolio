@@ -32,6 +32,41 @@
       </figure>    
     </section>
     <section>
+      <h2>What i do</h2>
+      <p>I'm a developer with a passion for creating web applications. I love working with modern technologies and frameworks to build efficient and user-friendly solutions.</p>
+      <p>My main focus is on front-end development, but I also have experience in back-end technologies. I'm always eager to learn new skills and improve my craft.</p>
+      
+      <form>
+        List of checkboxes as clickable icons with text, round and glassy. Which would filter projects.
+        <ul>
+          <li>
+            <input type="checkbox" id="html" name="html" value="HTML">
+            <label for="html">HTML</label>
+          </li>
+          <li>
+            <input type="checkbox" id="css" name="css" value="CSS">
+            <label for="css">CSS</label>
+          </li>
+          <li>
+            <input type="checkbox" id="js" name="js" value="JavaScript">
+            <label for="js">JavaScript</label>
+          </li>
+          <!-- Add more checkboxes as needed -->
+        </ul>
+      </form>
+    </section>
+    <section>
+      Project list as glassy cards with an image and a title + badges of techs + small intro
+      need a neat hover effect
+      <br/>
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.id"
+        :project="project"
+      />
+    </section>
+
+    <section>
       Projects ? Cards with projects and ideas, no need codes yet, just show that you have ideas and executing them
       <br/> 
       Cards with each project stating :
@@ -52,6 +87,28 @@
   </main>
 </template>
 <script setup lang="ts">
+import ProjectCard from '@/components/ProjectCard.vue';
+import { ref } from 'vue';
+import type { Project } from '@/model/Project';
+
+const projects = ref<Array<Project>>([
+  {
+    id: 1,
+    name: "Portfolio Website",
+    techStack: ["Vue", "TailwindCSS"],
+    status: "Completed",
+    description: "A personal portfolio website to showcase my projects and skills.",
+    image: "../assets/img/portfolio.png",
+  },
+  {
+    id: 2,
+    name: "Task Manager App",
+    techStack: ["Vue", "Node.js", "MongoDB"],
+    status: "In Progress",
+    description: "A task management app to organize daily tasks efficiently.",
+    image: "../assets/img/task-manager.png",
+  },
+]);
 </script>
 
 <style lang="scss">
