@@ -7,7 +7,7 @@
         Here you can find my projects, skills, and more about me.<br/>
         Feel free to explore and reach out if you have any questions!</p>
         <ul>
-          <li>Get my resume</li>
+          <li><a href="https://drive.google.com/file/d/1DEd9sTz8nBU5GiNecM1OBAAv88Kr_LZM/view?usp=drive_link" target="_blank">My CV</a></li>
           <li>
             <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">
               Hire me
