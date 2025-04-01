@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Header from './components/layout/Header.vue';
+import Footer from './components/layout/Footer.vue';
 import '@material/web/button/filled-button.js';
 import '@material/web/button/outlined-button.js';
 

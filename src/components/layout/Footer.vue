@@ -3,7 +3,7 @@
         <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/projects">Projects</RouterLink>
+            <RouterLink to="/about/coaching">Swim coaching</RouterLink>
         </nav>
     </footer>
 </template>

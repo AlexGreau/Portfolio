@@ -68,7 +68,7 @@
   </main>
 </template>
 <script setup lang="ts">
-import ProjectCard from '@/components/ProjectCard.vue';
+import ProjectCard from '@/components/cards/ProjectCard.vue';
 import { ref } from 'vue';
 import type { Project } from '@/model/Project';
 

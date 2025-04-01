@@ -10,7 +10,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { Project } from '../model/Project';
+import type { Project } from '../../model/Project';
 export default defineComponent({
     name: 'ProjectCard',
     props: {
