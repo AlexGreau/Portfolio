@@ -46,17 +46,17 @@ h6 {
     letter-spacing: 0.15px;
 }
 
-body {
-    font-family: 'Chakra Petch', sans-serif;
+:root {
+    --md-ref-typeface-brand: 'Chakra Petch';
+    --md-ref-typeface-plain: system-ui;
+
     font-size: 14px;
     letter-spacing: 0.5px;
 }
 
 button {
-    font-family: 'Chakra Petch', sans-serif;
     font-size: 13px;
     letter-spacing: 1.25px;
-    text-transform: uppercase;
 }
 
 caption {
