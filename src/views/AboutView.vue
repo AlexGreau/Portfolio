@@ -1,9 +1,13 @@
 <template>
   <section class="about">
     <h1>This is an about page</h1>
-    <p>Small paragraph about me</p>
+    <p>Small paragraph about me. What's more ? be a human and have more dimensions then just a dev</p>
     <div>A photo</div>
-    <div>My role as swim coach and why (past career)</div>
+    <p>
+      Small paragraph about my hobbies and how i spend my time, link to a blog ?
+    </p>
+    <h2>Swim coach career</h2>
+    <p>Small intro of the activity, and why (past career) + maybe how it influenced the website theme</p>
     <form>
       contact me form
     </form>
