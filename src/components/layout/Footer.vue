@@ -9,6 +9,10 @@
 </template>
 <style lang="scss" scoped>
 footer {
-    background: pink;
+    background: var(--md-sys-color-on-background);
+    color: var(--md-sys-color-background);
+    padding: 1rem;
+    text-align: center;
+    width: 100vw;
 }
 </style>

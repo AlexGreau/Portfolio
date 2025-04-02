@@ -1,6 +1,6 @@
 <template>
  <!-- <Header /> --> 
-  <RouterView />
+  <RouterView id="app-wrapper"/>
   <Footer />
 </template>
 

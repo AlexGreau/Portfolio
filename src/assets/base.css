@@ -66,7 +66,7 @@
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --md-sys-color-primary: rgb(169 199 255);
     --md-sys-color-surface-tint: rgb(169 199 255);
