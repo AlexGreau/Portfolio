@@ -9,8 +9,8 @@
 </template>
 <style lang="scss" scoped>
 footer {
-    background: var(--md-sys-color-on-background);
-    color: var(--md-sys-color-background);
+   // background: theme.map.get(theme.$light-theme, primary);
+   // color: theme.map.get(theme.$light-theme, background);
     padding: 1rem;
     text-align: center;
     width: 100vw;

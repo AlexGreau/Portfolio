@@ -1,10 +1,26 @@
 @use './typography.scss';
-@use './common/badge.scss';
-@import './base.css';
+@use './common/coin.scss';
+@use './common/pill.scss';
+// @import './base.css';
 
 #app-wrapper {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    'Chakra Petch',
+    sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

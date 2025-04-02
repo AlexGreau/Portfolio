@@ -1,0 +1,22 @@
+.coin {
+    border-radius: 50%;
+    
+    text-transform: uppercase;    
+    display: inline-block;
+    text-align: center;
+    // color: theme.map.get(theme.$light-theme, secondary);
+    // background-color: theme.map.get(theme.$light-theme, secondary);
+
+    width: auto;
+    height: auto;
+    padding: $spacing-xs;
+    font-size: 14px;
+    border-radius: 6px;
+
+    &.small {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+}

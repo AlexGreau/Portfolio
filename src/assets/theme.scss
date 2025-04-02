@@ -1,0 +1,52 @@
+@use "sass:map"; // Import the map module
+
+// Define color variables for light and dark themes
+$light-theme: (
+    background: #ffffff,
+    text: #000000,
+    primary: #007bff,
+    secondary: #6c757d
+);
+
+$dark-theme: (
+    background: #121212,
+    text: #ffffff,
+    primary: #1e90ff,
+    secondary: #a9a9a9
+);
+
+// Mixin to apply theme styles
+@mixin theme($theme) {
+    background-color: map.get($theme, background);
+    color: map.get($theme, text);
+
+    a {
+        color: map.get($theme, primary);
+    }
+
+    .secondary {
+        color: map.get($theme, secondary);
+    }
+}
+
+// Default to system preference
+@media (prefers-color-scheme: light) {
+    :root {
+        @include theme($light-theme);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include theme($dark-theme);
+    }
+}
+
+// Allow manual override using a class
+.light-theme {
+    @include theme($light-theme);
+}
+
+.dark-theme {
+    @include theme($dark-theme);
+}
