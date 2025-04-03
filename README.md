@@ -1,21 +1,27 @@
 # Portfolio
-[Material Web from Google](https://github.com/material-components/material-web)
-I chose Vue3 and typescript because it's a stack easily transferrable into my current work (Vue2): what i learn here can be directly applied to my work and vice-versa.
-I also use this project to explore [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+Vue3 and typescript were chosen because it's a stack easily transferrable into my current work (Vue2): what i learn here can be directly applied to my work and vice-versa.
+I also use this project to explore [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) if any complex element is needed
 
 ## Project Setup
  
 ```sh
-npm install
+npm i
+```
+```sh
 npm run dev
 ```
 ## Design decisions
+UX decisions made during this project.
 ## Typography and color
 The font was selected via [Google fonts](https://fonts.google.com/selection), with the wish of having something calm but active and easy to read.
 
 The color theme was used following the [material them builder](https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder). I chose dark blue as it links my swimming passion and the values I want to communicate here.
+## Spacing and overall component design
+I mainly inspire myself from [Material Web from Google](https://github.com/material-components/material-web) and follow the material design guidelines stated by Google. 
+
 
 ## Architecture decisions
+Project architecture decisions made and the rationale behind it
 ### SCSS styles out of components
 The styles of each component will be defined in a separate scss file. This improves performances by preventing duplication of style definition when the component is repeated many times. 
 
