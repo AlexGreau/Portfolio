@@ -80,14 +80,16 @@ const projects = ref<Array<Project>>([
     status: "Completed",
     description: "A personal portfolio website to showcase my projects and skills.",
     image: "../assets/img/portfolio.png",
+    route: "/projects/portfolio",
   },
   {
     id: 2,
-    name: "Task Manager App",
+    name: "Workout timer",
     techStack: ["Vue", "Node.js", "MongoDB"],
     status: "In Progress",
-    description: "A task management app to organize daily tasks efficiently.",
+    description: "A workout helper to plan and execute your workouts.",
     image: "../assets/img/task-manager.png",
+    route: "/projects/workout-timer",
   },
 ]);
 </script>

@@ -3,7 +3,7 @@ export interface Project {
     status: string;
     id: number;
     techStack: string[];
-    routeLink?: string;
+    route?: string;
     description?: string;
     image?: string;
 }
@@ -12,7 +12,7 @@ const exampleProject: Project = {
     id: 0,
     name: "Portfolio Website",
     techStack: ["TypeScript", "React", "CSS"],
-    routeLink: "/projects/portfolio-website",
+    route: "/projects/portfolio-website",
     status: "In Progress",
 };
 
