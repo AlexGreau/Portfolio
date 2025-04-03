@@ -148,3 +148,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --primary-color: #1e3a5f; /* Deep blue */
+  --secondary-color: #d9c8a9; /* Muted beige */
+  --accent-color: #689cc5; /* Soft sky blue */
+  --background-color: #f4f1e1; /* Off-white */
+  --text-color: #2c2c2c;
+  --font-primary: 'Noto Serif JP', serif;
+  --font-secondary: 'Poppins', sans-serif;
+}

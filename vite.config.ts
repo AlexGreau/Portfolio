@@ -18,7 +18,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/assets/common/global-imports.scss" as *;`,
+        additionalData: `@use "@/assets/common/global-imports.scss";`,
+       // this does not work,. Path is correct, but the variables are not usable in every file
+       // so we need to import them in every file
       }
     }
   }

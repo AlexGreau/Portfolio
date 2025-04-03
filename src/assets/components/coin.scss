@@ -1,3 +1,6 @@
+@use "@/assets/common/variables.scss" as *; // Import variables
+@use "@/assets/common/theme.scss" as *; // Import theme styles and variables
+
 .coin {
     border-radius: 50%;
     
@@ -9,7 +12,7 @@
 
     width: auto;
     height: auto;
-    padding: $spacing-xs;
+    padding: $spacing-sm;
     font-size: 14px;
     border-radius: 6px;
 

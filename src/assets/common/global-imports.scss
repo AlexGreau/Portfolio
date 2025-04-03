@@ -1,2 +1,3 @@
-@use "../variables.scss" as *;
-@use "../theme.scss" as *;
+
+@use "@/assets/common/variables.scss" as *;
+@use "@/assets/common/theme.scss" as *; // Import theme styles and variables

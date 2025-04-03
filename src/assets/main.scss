@@ -1,6 +1,6 @@
-@use './typography.scss';
-@use './common/coin.scss';
-@use './common/pill.scss';
+@use '@/assets/common/typography.scss' as *;
+@use '@/assets/components/coin.scss' as *;
+@use '@/assets/components/pill.scss' as *;
 // @import './base.css';
 
 #app-wrapper {
