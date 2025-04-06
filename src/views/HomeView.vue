@@ -31,7 +31,7 @@
         <figcaption>This website's creator</figcaption>
       </figure>    
     </section>
-    <section>
+    <section class="project-finder">
       <h2>What i do</h2>
       <p>I'm a developer with a passion for creating web applications. I love working with modern technologies and frameworks to build efficient and user-friendly solutions.</p>
       <p>My main focus is on front-end development, but I also have experience in back-end technologies. I'm always eager to learn new skills and improve my craft.</p>
@@ -130,6 +130,32 @@ const projects = ref<Array<Project>>([
           img {
             height: 20px;
             width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  & > section.project-finder {
+    form {
+      ul {
+        display: flex;
+        gap: 10px;
+        list-style-type: none;
+        li {
+          input[type="checkbox"] {
+            display: none; // Hide the default checkbox
+          }
+          label {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+              background-color: pink;
+            }
           }
         }
       }
