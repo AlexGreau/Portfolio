@@ -53,7 +53,7 @@
         <fieldset>
           <legend>Filter by techs</legend>
           <label>
-            <input type="checkbox" name="vue" value="Vue" />
+            <input type="checkbox" name="vue" value="Vue" tabindex="0"/>
             <img src="@/assets/icons/vuejs.svg" alt="Vue.js" />
           </label>
           <label>
@@ -212,9 +212,21 @@ const projects = ref<Array<Project>>([
           input[type='checkbox']:checked + img {
             background-color: pink;
           }
+          input[type="checkbox"]:focus + img {
+            outline: 2px solid blue;
+            outline-offset: 2px;
+          }
 
           input[type='checkbox'] {
-            display: none; // Hide the default checkbox
+            overflow: hidden;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            border: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
           }
         }
       }
