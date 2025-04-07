@@ -99,10 +99,12 @@
     <section class="projects">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </section>
+    <Recommendations />
   </main>
 </template>
 <script setup lang="ts">
 import ProjectCard from '@/components/cards/ProjectCard.vue'
+import Recommendations from '@/components/sections/recommandations.vue'
 import { ref } from 'vue'
 import type { Project } from '@/model/Project'
 
