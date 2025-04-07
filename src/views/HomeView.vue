@@ -84,10 +84,10 @@
             <input type="checkbox" name="scss" value="SCSS" />
             <img src="@/assets/icons/sass.svg" alt="SCSS" />
           </label>
-          <label>
+          <!-- <label>
             <input type="checkbox" name="express" value="Express" />
             Express
-          </label>
+          </label> -->
           <label>
             <input type="checkbox" name="AWS" value="AWS" />
             <img src="@/assets/icons/aws.svg" alt="aws" />
