@@ -24,4 +24,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  *:focus {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+  }
 }
