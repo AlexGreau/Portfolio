@@ -47,50 +47,14 @@
         My main focus is on front-end development, but I also have experience in back-end
         technologies. I'm always eager to learn new skills and improve my craft.
       </p>
-      <form>
+      <form @submit.prevent>
         List of checkboxes as clickable icons with text, round and glassy. Which would filter
         projects.
         <fieldset>
-          <legend>Filter by techs</legend>
-          <label>
-            <input type="checkbox" name="vue" value="Vue" tabindex="0"/>
-            <img src="@/assets/icons/vuejs.svg" alt="Vue.js" />
-          </label>
-          <label>
-            <input type="checkbox" name="react" value="React" />
-            <img src="@/assets/icons/react.svg" alt="React" />
-          </label>
-          <label>
-            <input type="checkbox" name="nodejs" value="Node.js" />
-            <img src="@/assets/icons/nodejs.svg" alt="Node.js" />
-          </label>
-          <label>
-            <input type="checkbox" name="typescript" value="TypeScript" />
-            <img src="@/assets/icons/typescript.svg" alt="TypeScript" />
-          </label>
-          <label>
-            <input type="checkbox" name="html" value="HTML" />
-            <img src="@/assets/icons/html.svg" alt="HTML" />
-          </label>
-          <label>
-            <input type="checkbox" id="js" name="js" value="JavaScript" />
-            <img src="@/assets/icons/javascript.svg" alt="JavaScript" />
-          </label>
-          <label>
-            <input type="checkbox" name="figma" value="Figma" />
-            <img src="@/assets/icons/figma.svg" alt="Figma" />
-          </label>
-          <label>
-            <input type="checkbox" name="scss" value="SCSS" />
-            <img src="@/assets/icons/sass.svg" alt="SCSS" />
-          </label>
-          <!-- <label>
-            <input type="checkbox" name="express" value="Express" />
-            Express
-          </label> -->
-          <label>
-            <input type="checkbox" name="AWS" value="AWS" />
-            <img src="@/assets/icons/aws.svg" alt="aws" />
+          <legend>filter by tech used</legend>
+          <label v-for="tech in techs" :key="tech.value">
+            <input type="checkbox" :name="tech.name" :value="tech.value" />
+            <img :src="getIcon(tech.icon)" :alt="tech.alt" />
           </label>
         </fieldset>
         <!-- Add more checkboxes as needed -->
@@ -104,7 +68,7 @@
 </template>
 <script setup lang="ts">
 import ProjectCard from '@/components/cards/ProjectCard.vue'
-import Recommendations from '@/components/sections/recommandations.vue'
+import Recommendations from '@/components/sections/Recommandations.vue'
 import { ref } from 'vue'
 import type { Project } from '@/model/Project'
 
@@ -137,6 +101,75 @@ const projects = ref<Array<Project>>([
     route: '/projects/swim-coach',
   },
 ])
+
+const techs = ref([
+  {
+    name: 'Vue',
+    icon: 'vuejs.svg',
+    alt: 'Vue.js',
+    value: 'vue',
+  },
+  {
+    name: 'React',
+    icon: 'react.svg',
+    alt: 'React',
+    value: 'react',
+  },
+  {
+    name: 'Node.js',
+    icon: 'nodejs.svg',
+    alt: 'Node.js',
+    value: 'nodejs',
+  },
+  {
+    name: 'TypeScript',
+    icon: 'typescript.svg',
+    alt: 'TypeScript',
+    value: 'typescript',
+  },
+  {
+    name: 'HTML/CSS',
+    icon: 'html.svg',
+    alt: 'HTML/CSS',
+    value: 'htmlcss',
+  },
+  {
+    name: 'JavaScript',
+    icon: 'javascript.svg',
+    alt: 'JavaScript',
+    value: 'javascript',
+  },
+  {
+    name: 'Figma',
+    icon: 'figma.svg',
+    alt: 'Figma',
+    value: 'figma',
+  },
+  {
+    name: 'SCSS/SASS',
+    icon: 'sass.svg',
+    alt: 'SCSS/SASS',
+    value: 'scsssass',
+  },
+  {
+    name: 'AWS',
+    icon: 'aws.svg',
+    alt: 'AWS',
+    value: 'aws',
+  },
+])
+
+const getIcon = ref((filename: string) => {
+  // Function to get the icon path
+  return new URL(`../assets/icons/techs/${filename}`, import.meta.url).href
+})
+
+const filterProjects = (selectedTechs: string[]) => {
+  // Filter projects based on selected techs
+  return projects.value.filter((project) =>
+    project.techStack.some((tech) => selectedTechs.includes(tech)),
+  )
+}
 </script>
 
 <style lang="scss">
@@ -211,7 +244,7 @@ const projects = ref<Array<Project>>([
           input[type='checkbox']:checked + img {
             background-color: pink;
           }
-          input[type="checkbox"]:focus + img {
+          input[type='checkbox']:focus + img {
             outline: 2px solid blue;
             outline-offset: 2px;
           }
@@ -242,7 +275,6 @@ const projects = ref<Array<Project>>([
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-
   }
 }
 </style>
