@@ -40,16 +40,64 @@
         List of checkboxes as clickable icons with text, round and glassy. Which would filter projects.
         <ul>
           <li>
-            <input type="checkbox" id="html" name="html" value="HTML">
-            <label for="html">HTML</label>
+            <label>
+              <input type="checkbox" name="vue" value="Vue">
+              <img src="@/assets/icons/vuejs.svg" alt="Vue.js" />
+            </label>
           </li>
           <li>
-            <input type="checkbox" id="css" name="css" value="CSS">
-            <label for="css">CSS</label>
+            <label>
+              <input type="checkbox" name="react" value="React">
+              <img src="@/assets/icons/react.svg" alt="React" />
+            </label>
           </li>
           <li>
-            <input type="checkbox" id="js" name="js" value="JavaScript">
-            <label for="js">JavaScript</label>
+            <label>
+              <input type="checkbox" name="nodejs" value="Node.js">
+              <img src="@/assets/icons/nodejs.svg" alt="Node.js" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="typescript" value="TypeScript">
+              <img src="@/assets/icons/typescript.svg" alt="TypeScript" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="html" value="HTML">
+              <img src="@/assets/icons/html.svg" alt="HTML" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="js" name="js" value="JavaScript">
+              <img src="@/assets/icons/javascript.svg" alt="JavaScript" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="figma" value="Figma">
+              <img src="@/assets/icons/figma.svg" alt="Figma" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="scss" value="SCSS">
+              <img src="@/assets/icons/sass.svg" alt="SCSS" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="express" value="Express">
+              Express
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="AWS" value="AWS">
+              <img src="@/assets/icons/aws.svg" alt="aws"/>
+            </label>
           </li>
           <!-- Add more checkboxes as needed -->
         </ul>
@@ -76,7 +124,7 @@ const projects = ref<Array<Project>>([
   {
     id: 1,
     name: "Portfolio Website",
-    techStack: ["Vue", "TailwindCSS"],
+    techStack: ["Vue", "Scss", "HTML/CSS", "TypeScript"],
     status: "Completed",
     description: "A personal portfolio website to showcase my projects and skills.",
     image: "../assets/img/portfolio.png",
@@ -85,11 +133,20 @@ const projects = ref<Array<Project>>([
   {
     id: 2,
     name: "Workout timer",
-    techStack: ["Vue", "Node.js", "MongoDB"],
+    techStack: ["React", "Node.js", "Figma"],
     status: "In Progress",
     description: "A workout helper to plan and execute your workouts.",
     image: "../assets/img/task-manager.png",
     route: "/projects/workout-timer",
+  },
+  {
+    id: 3,
+    name: "Swim coach website",
+    techStack: ["Vue", "Node.js", "MongoDB"],
+    status: "To do",
+    description: "My swim coaching services and how to reach out to me.",
+    image: "../assets/img/task-manager.png",
+    route: "/projects/swim-coach",
   },
 ]);
 </script>
