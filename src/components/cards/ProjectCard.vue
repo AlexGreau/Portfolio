@@ -5,7 +5,7 @@
         <ul>
             <li v-for="(tech, index) in project.techStack" :key="index" class="pill">{{ tech }}</li>
         </ul>
-        <router-link v-if="project.route" :to="project.route" class="button">View Project</router-link>
+        <router-link v-if="project.route" :to="project.route" class="button">See more</router-link>
     </article>
 </template>
 <script lang="ts">

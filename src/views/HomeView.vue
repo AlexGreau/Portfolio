@@ -96,10 +96,7 @@
         <!-- Add more checkboxes as needed -->
       </form>
     </section>
-    <section>
-      Project list as glassy cards with an image and a title + badges of techs + small intro need a
-      neat hover effect
-      <br />
+    <section class="projects">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </section>
   </main>
@@ -231,6 +228,19 @@ const projects = ref<Array<Project>>([
         }
       }
     }
+  }
+
+  & > section.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+
   }
 }
 </style>
