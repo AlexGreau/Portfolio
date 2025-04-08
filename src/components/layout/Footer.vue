@@ -34,9 +34,10 @@ footer {
   // background: theme.map.get(theme.$light-theme, primary);
   // color: theme.map.get(theme.$light-theme, background);
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   background: grey;
-  padding: 32px max(calc((100% - 1280px) * 0.5), 12px);
+  padding: 12px clamp(12px, calc((100% - 1280px) * 0.5), 64px);
 
   display: grid;
   //   grid-template-columns: repeat(2, 50%);
@@ -44,7 +45,6 @@ footer {
   gap: 12px;
 
   nav {
-    grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -52,7 +52,6 @@ footer {
   }
 
   section {
-    grid-column: 2;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -79,7 +78,6 @@ footer {
   }
 
   & > p {
-    grid-row: 2;
     grid-column: 1 / -1;
     text-align: center;
   }
