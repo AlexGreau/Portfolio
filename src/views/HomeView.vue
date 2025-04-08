@@ -53,7 +53,7 @@
         <fieldset>
           <legend>filter by tech used</legend>
           <label v-for="tech in techs" :key="tech.value">
-            <input type="checkbox" :name="tech.name" :value="tech.value" />
+            <input type="checkbox" :name="tech.name" :value="tech.isChecked"/>
             <img :src="getIcon(tech.icon)" :alt="tech.alt" />
           </label>
         </fieldset>
@@ -71,12 +71,13 @@ import ProjectCard from '@/components/cards/ProjectCard.vue'
 import Recommendations from '@/components/sections/Recommandations.vue'
 import { ref } from 'vue'
 import type { Project } from '@/model/Project'
+import { TechName, type Tech } from '@/model/Tech'
 
 const projects = ref<Array<Project>>([
   {
     id: 1,
     name: 'Portfolio Website',
-    techStack: ['Vue', 'Scss', 'HTML/CSS', 'TypeScript'],
+    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
     status: 'Completed',
     description: 'A personal portfolio website to showcase my projects and skills.',
     image: '../assets/img/portfolio.png',
@@ -85,7 +86,7 @@ const projects = ref<Array<Project>>([
   {
     id: 2,
     name: 'Workout timer',
-    techStack: ['React', 'Node.js', 'Figma'],
+    techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML, TechName.CSS],
     status: 'In Progress',
     description: 'A workout helper to plan and execute your workouts.',
     image: '../assets/img/task-manager.png',
@@ -94,7 +95,7 @@ const projects = ref<Array<Project>>([
   {
     id: 3,
     name: 'Swim coach website',
-    techStack: ['Vue', 'Node.js', 'MongoDB'],
+    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
     status: 'To do',
     description: 'My swim coaching services and how to reach out to me.',
     image: '../assets/img/task-manager.png',
@@ -102,60 +103,70 @@ const projects = ref<Array<Project>>([
   },
 ])
 
-const techs = ref([
+let filteredProjects = ref<Array<Project>>([])
+
+const techs = ref<Array<Tech>>([
   {
-    name: 'Vue',
+    name: TechName.VUE,
     icon: 'vuejs.svg',
     alt: 'Vue.js',
-    value: 'vue',
+    isChecked: false,
   },
   {
-    name: 'React',
+    name: TechName.REACT,
     icon: 'react.svg',
     alt: 'React',
     value: 'react',
+    isChecked: false,
   },
   {
-    name: 'Node.js',
+    name: TechName.NODE,
     icon: 'nodejs.svg',
     alt: 'Node.js',
     value: 'nodejs',
+    isChecked: false,
   },
   {
-    name: 'TypeScript',
+    name: TechName.TS,
     icon: 'typescript.svg',
     alt: 'TypeScript',
     value: 'typescript',
+    isChecked: false,
   },
   {
-    name: 'HTML/CSS',
+    name: TechName.HTML,
     icon: 'html.svg',
-    alt: 'HTML/CSS',
-    value: 'htmlcss',
+    alt: 'HTML',
+    value: 'html',
+    isChecked: false,
   },
   {
-    name: 'JavaScript',
+    name: TechName.JS,
     icon: 'javascript.svg',
     alt: 'JavaScript',
     value: 'javascript',
+    isChecked: false,
   },
   {
-    name: 'Figma',
+    name: TechName.FIGMA,
     icon: 'figma.svg',
     alt: 'Figma',
     value: 'figma',
+    isChecked: false,
   },
   {
-    name: 'SCSS/SASS',
+    name: TechName.SCSS,
     icon: 'sass.svg',
-    alt: 'SCSS/SASS',
-    value: 'scsssass',
+    alt: 'SCSS',
+    value: 'scss',
+    isChecked: false,
   },
   {
-    name: 'AWS',
+    name: TechName.AWS,
     icon: 'aws.svg',
     alt: 'AWS',
     value: 'aws',
+    isChecked: false,
   },
 ])
 
@@ -163,13 +174,6 @@ const getIcon = ref((filename: string) => {
   // Function to get the icon path
   return new URL(`../assets/icons/techs/${filename}`, import.meta.url).href
 })
-
-const filterProjects = (selectedTechs: string[]) => {
-  // Filter projects based on selected techs
-  return projects.value.filter((project) =>
-    project.techStack.some((tech) => selectedTechs.includes(tech)),
-  )
-}
 </script>
 
 <style lang="scss">
