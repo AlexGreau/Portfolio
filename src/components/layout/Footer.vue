@@ -6,6 +6,7 @@
       <RouterLink to="/about/coaching">Swim coaching</RouterLink>
     </nav>
     <section>
+      Glad you made it to down here! <br/>
       Let's talk. <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
       <ul>
         <li>
@@ -37,11 +38,10 @@ footer {
   max-width: 100%;
   box-sizing: border-box;
   background: grey;
-  padding: 12px clamp(12px, calc((100% - 1280px) * 0.5), 64px);
+  padding: 48px max(calc((100% - 1280px) * 0.5), 12px);
 
   display: grid;
-  //   grid-template-columns: repeat(2, 50%);
-  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   gap: 12px;
 
   nav {
@@ -49,13 +49,25 @@ footer {
     flex-direction: column;
     gap: 8px;
     margin-bottom: 16px;
+    font-size: larger;
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+      font-size: 32px;
+
+      &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
   }
 
   section {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+   
     margin-bottom: 16px;
+    font-size: 24px;
 
     a {
       color: inherit;
