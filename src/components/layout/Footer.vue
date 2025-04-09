@@ -37,8 +37,10 @@ footer {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  background: grey;
-  padding: 48px max(calc((100% - 1280px) * 0.5), 12px);
+  padding: 64px 
+    max(calc((100% - 1280px) * 0.5), 12px)
+    12px
+    max(calc((100% - 1280px) * 0.5), 12px);
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
@@ -54,7 +56,6 @@ footer {
     a {
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      color: #fff;
       font-size: 32px;
 
       &:hover {
