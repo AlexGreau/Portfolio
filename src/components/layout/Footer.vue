@@ -1,12 +1,20 @@
 <template>
   <footer>
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/about/coaching">Swim coaching</RouterLink>
+      <ul>
+        <li>
+          <RouterLink to="/">Home</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about">About</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about/coaching">Swim coaching</RouterLink>
+        </li>
+      </ul>
     </nav>
     <section>
-      Glad you made it to down here! <br/>
+      Glad you made it to down here! <br />
       Let's talk. <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
       <ul>
         <li>
@@ -17,13 +25,13 @@
           >
         </li>
         <li>
-          <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect"> Hire me </a>
+          <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">Hire me </a>
         </li>
         <li>
-          <a href="https://github.com/AlexGreau" target="_blank"> Github </a>
+          <a href="https://github.com/AlexGreau" target="_blank">Github </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/alexandre-greau/" target="_blank"> LinkedIn </a>
+          <a href="https://www.linkedin.com/in/alexandre-greau/" target="_blank">LinkedIn </a>
         </li>
       </ul>
     </section>
@@ -37,10 +45,7 @@ footer {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 64px 
-    max(calc((100% - 1280px) * 0.5), 12px)
-    12px
-    max(calc((100% - 1280px) * 0.5), 12px);
+  padding: 64px max(calc((100% - 1280px) * 0.5), 12px) 12px max(calc((100% - 1280px) * 0.5), 12px);
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
@@ -53,20 +58,39 @@ footer {
     margin-bottom: 16px;
     font-size: larger;
 
-    a {
-      text-decoration: none;
-      transition: all 0.1s ease-in-out;
-      font-size: 32px;
+    ul {
+      list-style: none;
+      li {
+        padding-left: 0px;
+        a {
+          position: relative;
+          text-decoration: none;
+          font-size: 32px;
+          transition: all 0.3s ease;
 
-      &:hover {
-        text-decoration: underline;
-        font-weight: bold;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease;
+          }
+
+          &:hover {
+            font-weight: bold;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
 
   section {
-   
     margin-bottom: 16px;
     font-size: 24px;
 
@@ -74,18 +98,42 @@ footer {
       color: inherit;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      transition: font-weight 0.3s ease;
     }
 
     ul {
       display: flex;
-      gap: 8px;
+      gap: 1em;
       list-style-type: none;
       padding-left: 0px;
+      padding-top: 1.5em;
+      li {
+        a {
+          position: relative;
+          &::before {
+            position: relative;
+            top: 4px;
+            left: 0px;
+            height: 24px;
+            width: 24px;
+            margin-right: 3px;
+            content: '';
+            background-color: var(--color-primary);
+            -webkit-mask: url('@/assets/icons/arrows/ne.svg') no-repeat center;
+            mask: url('@/assets/icons/arrows/ne.svg') no-repeat center;
+            mask-size: contain;
+            align-items: center;
+            // background-image: ;
+            display: inline-block;
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            &::before {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
     }
   }
 
