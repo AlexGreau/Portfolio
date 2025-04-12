@@ -15,7 +15,7 @@
     </nav>
     <section>
       Glad you made it to down here! <br />
-      Let's talk. <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
+      Ping me at <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
       <ul>
         <li>
           <a
@@ -95,10 +95,20 @@ footer {
     font-size: 24px;
 
     a {
+      // all links
       color: inherit;
       text-decoration: none;
       font-weight: bold;
       transition: font-weight 0.3s ease;
+    }
+
+    & > a {
+      // only the first link
+      text-decoration: underline;
+      transition: all 0.3s ease;
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     ul {
