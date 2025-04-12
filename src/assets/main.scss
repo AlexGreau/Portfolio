@@ -2,7 +2,7 @@
 @use '@/assets/components/coin.scss' as *;
 @use '@/assets/components/pill.scss' as *;
 @use '@/assets/components/card.scss' as *;
-// @import './base.css';
+@import './base.css';
 
 #app-wrapper {
   max-width: 1280px;
