@@ -1,18 +1,17 @@
 @use "@/assets/common/variables.scss" as *; // Import variables
-@use "@/assets/common/theme.scss" as *; // Import theme styles and variables
 
 .pill {
     display: inline-block;
     padding: $spacing-xs $spacing-sm;
     border-radius: 1em;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--color-tertiary-container);
+    color: var(--color-on-tertiary-container);
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
     
     &:hover {
-        background-color: #e0e0e0;
-        color: #000;
+        background-color: var(--color-tertiary);
+        color: var(--color-on-tertiary);
     }
 }

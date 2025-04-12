@@ -1,6 +1,5 @@
 @use '@/assets/common/variables.scss' as *; // Import variables
-@use '@/assets/common/theme.scss' as *; // Import theme styles and variables
-@use 'sass:map'; // Import the map module
+
 
 .project-card {
   display: flex;
@@ -13,7 +12,8 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  background-color: map.get($light-theme, background); // Use light theme background color
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface);
 
   &:hover {
     transform: translateY(-2px);

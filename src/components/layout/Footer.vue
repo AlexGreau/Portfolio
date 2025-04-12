@@ -32,8 +32,8 @@
 </template>
 <style lang="scss" scoped>
 footer {
-  // background: theme.map.get(theme.$light-theme, primary);
-  // color: theme.map.get(theme.$light-theme, background);
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ footer {
 
     a {
       text-decoration: none;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.1s ease-in-out;
       font-size: 32px;
 
       &:hover {
@@ -77,7 +77,6 @@ footer {
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: #fff;
         text-decoration: underline;
       }
     }

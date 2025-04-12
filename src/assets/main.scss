@@ -11,19 +11,6 @@
   font-weight: normal;
   
   min-height: 100vh;
-  color: var(--color-on-surface);
-  background: var(--color-surface);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    'Chakra Petch',
-    sans-serif;
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
 
   *:focus {
     outline: 2px solid blue;
@@ -31,3 +18,16 @@
   }
 }
 
+body {
+  color:var(--color-on-surface);
+  background:var(--color-surface);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
