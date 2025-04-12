@@ -53,7 +53,7 @@
         <fieldset>
           <legend>filter by tech used</legend>
           <label v-for="tech in techs" :key="tech.value">
-            <input type="checkbox" :name="tech.name" :value="tech.isChecked"/>
+            <input type="checkbox" :name="tech.name" :value="tech.isChecked" />
             <img :src="getIcon(tech.icon)" :alt="tech.alt" />
           </label>
         </fieldset>
@@ -86,7 +86,14 @@ const projects = ref<Array<Project>>([
   {
     id: 2,
     name: 'Workout timer',
-    techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML, TechName.CSS],
+    techStack: [
+      TechName.REACT,
+      TechName.TS,
+      TechName.FIGMA,
+      TechName.AWS,
+      TechName.HTML,
+      TechName.CSS,
+    ],
     status: 'In Progress',
     description: 'A workout helper to plan and execute your workouts.',
     image: '../assets/img/task-manager.png',
@@ -178,7 +185,6 @@ const getIcon = ref((filename: string) => {
 
 <style lang="scss">
 @use '@/assets/common/variables.scss' as *; // Import variables
-@use '@/assets/common/theme.scss' as *; // Import theme styles and variables
 .main-wrapper {
   display: flex;
   flex-direction: column;
@@ -235,18 +241,20 @@ const getIcon = ref((filename: string) => {
         label {
           img {
             border-radius: 50%;
-            width: 48px;
-            height: 48px;
+            width: 64px;
+            height: 64px;
             padding: $spacing-md;
             display: inline-block;
             transition: all 0.3s ease;
             &:focus,
             &:hover {
-              background-color: aquamarine;
+              background-color: var(--color-surface-container-highest);
             }
           }
           input[type='checkbox']:checked + img {
-            background-color: pink;
+            background-color: var(--color-primary-container);
+            color: var(--color-on-primary-container);
+            border-color: var(--color-primary);
           }
           input[type='checkbox']:focus + img {
             outline: 2px solid blue;
@@ -254,6 +262,8 @@ const getIcon = ref((filename: string) => {
           }
 
           input[type='checkbox'] {
+            // Hide the checkbox
+            // This is necessary to provide keyboard navigation
             overflow: hidden;
             position: absolute;
             width: 1px;
