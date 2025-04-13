@@ -15,7 +15,7 @@
     </nav>
     <section>
       Glad you made it to down here! <br />
-      Ping me at <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
+      Reach out, say hello <a href="mailto:alexgreau@live.fr">alexgreau@live.fr</a>
       <ul>
         <li>
           <a

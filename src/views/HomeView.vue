@@ -2,22 +2,48 @@
   <main class="main-wrapper">
     <section class="hero-wrapper">
       <div>
-        <h1>My Portfolio</h1>
+        <h1>Alexandre Gréau</h1>
         <p>
-          Welcome to my portfolio! I'm a passionate developer.<br />
-          Here you can find my projects, skills, and more about me.<br />
-          Feel free to explore and reach out if you have any questions!
+          aka Alex, Front-end developer and UX enthusiast based in Singapore.<br />
+          Some of my personal explorations and useful creations are exposed here.<br />
+          Have a look, and reach out to say hi!
         </p>
         <ul>
           <li>
             <a
               href="https://drive.google.com/file/d/1DEd9sTz8nBU5GiNecM1OBAAv88Kr_LZM/view?usp=drive_link"
               target="_blank"
-              >My CV</a
             >
+              <!-- inline since it has semantic value + color changes-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M280-280h400v-80H280v80Zm200-120 160-160-56-56-64 62v-166h-80v166l-64-62-56 56 160 160Zm0 320q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              My CV
+            </a>
           </li>
           <li>
-            <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect"> Hire me </a>
+            <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z"
+                />
+              </svg>
+              Say hi</a
+            >
           </li>
           <li>
             <a href="https://github.com/AlexGreau" target="_blank">
@@ -198,6 +224,61 @@ const getIcon = ref((filename: string) => {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    height: 100vh;
+    & > div {
+      h1 {
+        margin-bottom: 0px;
+      }
+      p {
+        margin: 0px;
+        margin-bottom: 20px;
+      }
+      ul {
+        // links
+        display: flex;
+        gap: 1em;
+        padding-left: 0px;
+        align-items: baseline;
+        li {
+          display: inline;
+          a {
+            position: relative;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.1s ease;
+            img {
+              height: 1em;
+              width: 1em;
+              position: relative;
+              bottom: 0px;
+            }
+            svg {
+              width: 1em;
+              height: 1em;
+              position: relative;
+              bottom: 0px;
+              left: 0px;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px;
+              background-color: var(--color-primary);
+              transition: width 0.3s ease;
+            }
+            &:hover {
+              font-weight: bold;
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
     figure {
       margin-top: 20px;
       text-align: center;
@@ -209,19 +290,6 @@ const getIcon = ref((filename: string) => {
       figcaption {
         font-size: 0.9rem;
         color: #666;
-      }
-    }
-    ul {
-      display: flex;
-      gap: 6px;
-      li {
-        display: inline;
-        a {
-          img {
-            height: 20px;
-            width: auto;
-          }
-        }
       }
     }
   }
