@@ -48,11 +48,13 @@
           <li>
             <a href="https://github.com/AlexGreau" target="_blank">
               <img src="../assets/icons/github.svg" alt="GitHub" />
+              Github
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/alexandre-greau/" target="_blank">
               <img src="../assets/icons/linkedin.svg" alt="LinkedIn" />
+              LinkedIn
             </a>
           </li>
           <li></li>
@@ -134,6 +136,15 @@ const projects = ref<Array<Project>>([
     image: '../assets/img/task-manager.png',
     route: '/projects/swim-coach',
   },
+  {
+    id: 4,
+    name: 'Cook assistant',
+    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
+    status: 'To do',
+    description: 'A cooking assistant to help you cook your meals.',
+    image: '../assets/img/task-manager.png',
+    route: '/projects/cook-assistant',
+  }
 ])
 
 let filteredProjects = ref<Array<Project>>([])
@@ -223,8 +234,9 @@ const getIcon = ref((filename: string) => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     height: 100vh;
+    gap: 24px;
     & > div {
       h1 {
         margin-bottom: 0px;
@@ -246,6 +258,9 @@ const getIcon = ref((filename: string) => {
             text-decoration: none;
             font-size: 24px;
             transition: all 0.1s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
             img {
               height: 1em;
               width: 1em;
@@ -255,9 +270,6 @@ const getIcon = ref((filename: string) => {
             svg {
               width: 1em;
               height: 1em;
-              position: relative;
-              bottom: 0px;
-              left: 0px;
             }
             &::after {
               content: '';
@@ -269,8 +281,8 @@ const getIcon = ref((filename: string) => {
               background-color: var(--color-primary);
               transition: width 0.3s ease;
             }
+
             &:hover {
-              font-weight: bold;
               &::after {
                 width: 100%;
               }
