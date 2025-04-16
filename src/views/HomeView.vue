@@ -60,10 +60,10 @@
           <li></li>
         </ul>
       </div>
-      <figure>
+      <!-- <figure>
         <img src="../assets/img/me.jpg" alt="Alex Greau" />
         <figcaption>This website's creator</figcaption>
-      </figure>
+      </figure> -->
     </section>
     <section class="project-finder">
       <h2>What i do</h2>
@@ -232,6 +232,7 @@ const getIcon = ref((filename: string) => {
   & > section.hero-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
@@ -248,6 +249,7 @@ const getIcon = ref((filename: string) => {
       ul {
         // links
         display: flex;
+        flex-wrap: wrap;
         gap: 1em;
         padding-left: 0px;
         align-items: baseline;
@@ -295,7 +297,7 @@ const getIcon = ref((filename: string) => {
       margin-top: 20px;
       text-align: center;
       img {
-        max-width: 300px;
+        max-width: 20em;
         height: auto;
         border-radius: 50%;
       }
@@ -310,6 +312,7 @@ const getIcon = ref((filename: string) => {
     form {
       fieldset {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         list-style-type: none;
         justify-content: center;
@@ -366,9 +369,10 @@ const getIcon = ref((filename: string) => {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
+    padding: 0px;
   }
 }
 </style>
