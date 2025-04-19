@@ -1,5 +1,6 @@
 <template>
- <!-- <Header /> --> 
+ <!-- <Header /> -->
+  <HaloCursor />
   <RouterView id="app-wrapper"/>
   <!-- <Footer /> -->
 </template>
@@ -25,5 +26,6 @@ import { RouterView } from 'vue-router';
 import Footer from './components/layout/Footer.vue';
 import '@material/web/button/filled-button.js';
 import '@material/web/button/outlined-button.js';
+import HaloCursor from './components/common/HaloCursor.vue';
 
 </script>
