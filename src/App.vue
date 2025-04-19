@@ -1,7 +1,7 @@
 <template>
  <!-- <Header /> --> 
   <RouterView id="app-wrapper"/>
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <style lang="scss">
