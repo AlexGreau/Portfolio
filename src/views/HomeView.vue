@@ -81,7 +81,9 @@
           dev.
         </p>
       </article>
-      <article class="experiences-wrapper" id="experiences"></article>
+      <article class="experiences-wrapper" id="experiences">
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+      </article>
       <article class="projects" id="projects">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
       </article>
@@ -217,20 +219,27 @@ const getIcon = ref((filename: string) => {
 <style lang="scss">
 @use '@/assets/common/variables.scss' as *; // Import variables
 .main-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+  display: flex;
+  // grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  gap: 1rem;
+  padding: 0px 1.5rem;
   & > section.hero-wrapper {
-    grid-column: 1;
-    grid-row: -1 / 1;
     padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 40%;
+    flex: 1 0 45%;
+    min-width: 450px;
     gap: 24px;
+    flex-direction: column;
+    height: 100vh;
+    position: sticky;
+    top: 2rem;
+    align-self: self-start;
+    max-height: calc(100vh - 2rem);
     h1 {
       margin-bottom: 0px;
       width: 100%;
@@ -254,7 +263,7 @@ const getIcon = ref((filename: string) => {
           a {
             position: relative;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 1.2em;
             transition: all 0.1s ease;
             display: inline-flex;
             align-items: center;
@@ -278,7 +287,7 @@ const getIcon = ref((filename: string) => {
         a {
           position: relative;
           text-decoration: none;
-          font-size: 24px;
+          font-size: 1.2em;
           transition: all 0.1s ease;
           display: inline-flex;
           align-items: center;
@@ -315,8 +324,8 @@ const getIcon = ref((filename: string) => {
   }
 
   & > section.content-wrapper {
+    flex: 1 1 50%;
     & > article.about-wrapper {
-      grid-column: 2;
       margin-top: 20px;
       margin-bottom: 20px;
       padding: 0px;
@@ -330,7 +339,6 @@ const getIcon = ref((filename: string) => {
     }
 
     & > article.experiences-wrapper {
-      grid-column: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -342,7 +350,6 @@ const getIcon = ref((filename: string) => {
     }
 
     & > article.projects {
-      grid-column: 2;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -353,6 +360,23 @@ const getIcon = ref((filename: string) => {
       width: 100%;
       max-width: 1200px;
       padding: 0px;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .main-wrapper {
+    flex-direction: column;
+    & > section.hero-wrapper {
+      position: static;
+      height: auto;
+      max-height: none;
+      & > nav {
+        display: none;
+      }
+      & > ul {
+        margin-top: 0px;
+      }
     }
   }
 }
