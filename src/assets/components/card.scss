@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: center;
   padding: $spacing-md;
-  width: min(100%,400px);
+  max-width: 100%;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition:

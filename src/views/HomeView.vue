@@ -73,17 +73,19 @@
         <li></li>
       </ul>
     </section>
-    <section class="about-wrapper" id="about">
-      <h1>About me</h1>
-      <p>
-        Small paragraph about me. What's more? Be a human and have more dimensions than just a dev.
-      </p>
+    <section class="content-wrapper">
+      <article class="about-wrapper" id="about">
+        <h1>About me</h1>
+        <p>
+          Small paragraph about me. What's more? Be a human and have more dimensions than just a
+          dev.
+        </p>
+      </article>
+      <article class="experiences-wrapper" id="experiences"></article>
+      <article class="projects" id="projects">
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+      </article>
     </section>
-    <section class="experiences-wrapper" id="experiences"></section>
-    <section class="projects" id="projects">
-      <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
-    </section>
-    <!-- <Recommendations /> -->
   </main>
 </template>
 <script setup lang="ts">
@@ -225,20 +227,23 @@ const getIcon = ref((filename: string) => {
     grid-column: 1;
     grid-row: -1 / 1;
     padding-bottom: 20px;
-    
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 40%;
     gap: 24px;
     h1 {
       margin-bottom: 0px;
+      width: 100%;
     }
     h2 {
+      width: 100%;
     }
     p {
       margin: 0px;
+      width: 100%;
     }
     & > nav {
+      width: 100%;
       ul {
         display: flex;
         flex-direction: column;
@@ -259,6 +264,7 @@ const getIcon = ref((filename: string) => {
       }
     }
     & > ul {
+      width: 100%;
       // links
       margin-top: auto;
       display: flex;
@@ -308,44 +314,46 @@ const getIcon = ref((filename: string) => {
     }
   }
 
-  & > section.about-wrapper {
-    grid-column: 2;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0px;
-    h1 {
-      margin-bottom: 0px;
-    }
-    p {
-      margin: 0px;
+  & > section.content-wrapper {
+    & > article.about-wrapper {
+      grid-column: 2;
+      margin-top: 20px;
       margin-bottom: 20px;
+      padding: 0px;
+      h1 {
+        margin-bottom: 0px;
+      }
+      p {
+        margin: 0px;
+        margin-bottom: 20px;
+      }
     }
-  }
 
-  & > section.experiences-wrapper {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0px;
-  }
+    & > article.experiences-wrapper {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 0px;
+    }
 
-  & > section.projects {
-    grid-column: 2;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0px;
+    & > article.projects {
+      grid-column: 2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0px;
+    }
   }
 }
 </style>
