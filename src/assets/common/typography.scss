@@ -1,64 +1,106 @@
 // Styling o f all the headers and other text elements
 // in the application
+// used https://typescale.com/ for the values
 
 // import of font
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
 // headers margins
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   font-family: 'Chakra Petch', sans-serif;
+  font-size: clamp(var(--min), var(--val), var(--max));
+  letter-spacing: var(--letter-spacing, 0px);
 }
 
 h1 {
-  font-size: 86px;
-  letter-spacing: -1.5px;
+  //   font-size: 86px;
+  --letter-spacing: -1.5px;
+  --min: 2rem; /* minimum value */
+  --val: 6vw; /* preferred value = 5% viewport width */
+  //--max: 5.61rem; /* maximum value */
+  --max: 4.209rem; /* maximum value */
+
 }
 
 h2 {
-  font-size: 54px;
-  letter-spacing: -0.5px;
+  //   font-size: 54px;
+  --letter-spacing: -0.5px;
+  --min: 1.5rem; /* minimum value */
+  --val: 5vw; /* preferred value = 4% viewport width */
+  --max: 3.157rem; /* maximum value */
 }
 
 h3 {
-    font-size: 43px;
-    letter-spacing: 0px;
+  //   font-size: 43px;
+  --letter-spacing: 0px;
+  --min: 1.25rem; /* minimum value */
+  --val: 4vw; /* preferred value = 4% viewport width */
+  --max: 2.369rem; /* maximum value */
 }
 
 h4 {
-    font-size: 31px;
-    letter-spacing: 0.25px;
+  //   font-size: 31px;
+  --letter-spacing: 0.25px;
+  --min: 1.15rem; /* minimum value */
+  --val: 4vw; /* preferred value = 4% viewport width */
+  --max: 1.777rem; /* maximum value */
 }
 
 h5 {
-    font-size: 22px;
-    letter-spacing: 0px;
+  //   font-size: 22px;
+  --letter-spacing: 0px;
+  --min: 1.05rem; /* minimum value */
+  --val: 4vw; /* preferred value = 4% viewport width */
+  --max: 1.333rem; /* maximum value */
 }
 
 h6 {
-    font-size: 18px;
-    letter-spacing: 0.15px;
+  //   font-size: 18px;
+  --letter-spacing: 0.15px;
+  --min: 1.02rem; /* minimum value */
+  --val: 4vw; /* preferred value = 4% viewport width */
+  --max: 1.333rem; /* maximum value */
+}
+
+small {
+  --letter-spacing: 0.4px;
+  --min: 0.75rem;
+  --val: 0.75rem;
+  --max: 0.75rem;
 }
 
 .subtitle {
-    font-size: 14px;
-    letter-spacing: 0.15px;
-}
-
-:root {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+  //   font-size: 14px;
+  --letter-spacing: 0.15px;
+  --min: 1.5rem; /* minimum value */
+  --val: 4vw; /* preferred value = 4% viewport width */
+  --max: 2.25rem; /* maximum value */
 }
 
 button {
-    font-size: 13px;
-    letter-spacing: 1.25px;
+  font-size: 13px;
+  letter-spacing: 1.25px;
 }
 
 caption {
-    font-size: 11px;
-    letter-spacing: 0.4px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

@@ -2,7 +2,7 @@
   <main class="main-wrapper">
     <section class="hero-wrapper">
       <h1>Alexandre Gréau</h1>
-      <h2>Front-end developer</h2>
+      <h4>Front-end developer</h4>
       <p>
         aka Alex, Front-end developer and UX enthusiast based in Singapore.<br />
         Some of my personal explorations and useful creations are exposed here.<br />
@@ -75,7 +75,7 @@
     </section>
     <section class="content-wrapper">
       <article class="about-wrapper" id="about">
-        <h1>About me</h1>
+        <!-- <h2>About me</h2> -->
         <p>
           Small paragraph about me. What's more? Be a human and have more dimensions than just a
           dev.
@@ -219,9 +219,9 @@ const getIcon = ref((filename: string) => {
 .main-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-width: 100vw;
+  width: 100%;
   padding: 20px;
   & > section.hero-wrapper {
     grid-column: 1;
