@@ -14,7 +14,7 @@
   width: 30rem;
   height: 30rem;
   background: radial-gradient(
-    rgba(29, 78, 216, 0.15),
+    var(--halo-color),
     transparent 80%
   ); /* Replace with a semi-transparent version of your theme's primary color */
   transition: transform 0.1s ease;
