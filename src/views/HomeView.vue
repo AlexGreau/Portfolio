@@ -82,7 +82,7 @@
         </p>
       </article>
       <article class="experiences-wrapper" id="experiences">
-        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+        <WorkExperienceCard v-for="work in WorkExperiences" :key="work.id" :work="work" />
       </article>
       <article class="projects" id="projects">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
@@ -92,10 +92,11 @@
 </template>
 <script setup lang="ts">
 import ProjectCard from '@/components/cards/ProjectCard.vue'
-import Recommendations from '@/components/sections/Recommandations.vue'
+import WorkExperienceCard from '@/components/cards/WorkCard.vue'
 import { ref } from 'vue'
 import type { Project } from '@/model/Project'
-import { TechName, type Tech } from '@/model/Tech'
+import { TechName } from '@/model/Tech'
+import { type WorkExp } from '@/model/WorkExp'
 
 const projects = ref<Array<Project>>([
   {
@@ -143,77 +144,38 @@ const projects = ref<Array<Project>>([
   },
 ])
 
-let filteredProjects = ref<Array<Project>>([])
-
-const techs = ref<Array<Tech>>([
+const WorkExperiences = ref<Array<WorkExp>>([
   {
-    name: TechName.VUE,
-    icon: 'vuejs.svg',
-    alt: 'Vue.js',
-    isChecked: false,
+    company: 'Company A',
+    position: 'Front-end developer',
+    startDate: new Date('2022-01-01'),
+    endDate: new Date('2023-01-01'),
+    description: 'Worked on various projects using Vue.js and TypeScript.',
+    techs: [
+      TechName.VUE,
+      TechName.TS,
+      TechName.HTML,
+      TechName.CSS,
+      TechName.SCSS,
+    ],
+    id: 1,
   },
   {
-    name: TechName.REACT,
-    icon: 'react.svg',
-    alt: 'React',
-    value: 'react',
-    isChecked: false,
-  },
-  {
-    name: TechName.NODE,
-    icon: 'nodejs.svg',
-    alt: 'Node.js',
-    value: 'nodejs',
-    isChecked: false,
-  },
-  {
-    name: TechName.TS,
-    icon: 'typescript.svg',
-    alt: 'TypeScript',
-    value: 'typescript',
-    isChecked: false,
-  },
-  {
-    name: TechName.HTML,
-    icon: 'html.svg',
-    alt: 'HTML',
-    value: 'html',
-    isChecked: false,
-  },
-  {
-    name: TechName.JS,
-    icon: 'javascript.svg',
-    alt: 'JavaScript',
-    value: 'javascript',
-    isChecked: false,
-  },
-  {
-    name: TechName.FIGMA,
-    icon: 'figma.svg',
-    alt: 'Figma',
-    value: 'figma',
-    isChecked: false,
-  },
-  {
-    name: TechName.SCSS,
-    icon: 'sass.svg',
-    alt: 'SCSS',
-    value: 'scss',
-    isChecked: false,
-  },
-  {
-    name: TechName.AWS,
-    icon: 'aws.svg',
-    alt: 'AWS',
-    value: 'aws',
-    isChecked: false,
+    company: 'Company B',
+    position: 'Full-stack developer',
+    startDate: new Date('2023-01-01'),
+    endDate: new Date('2024-01-01'),
+    description: 'Worked on various projects using React and Node.js.',
+    techs: [
+      TechName.REACT,
+      TechName.NODE,
+      TechName.TS,
+      TechName.HTML,
+      TechName.CSS,
+    ],
+    id: 2,
   },
 ])
-
-const getIcon = ref((filename: string) => {
-  // Function to get the icon path
-  return new URL(`../assets/icons/techs/${filename}`, import.meta.url).href
-})
 </script>
 
 <style lang="scss">

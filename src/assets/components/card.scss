@@ -1,6 +1,5 @@
 @use '@/assets/common/variables.scss' as *; // Import variables
 
-
 .project-card {
   display: flex;
   flex-direction: column;
@@ -35,10 +34,22 @@
     gap: $spacing-sm;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;;
-    
+    justify-content: center;
   }
   & > a {
     text-align: end;
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & > p {
+    flex: 1 0 15%;
+  }
+  & > div {
+    flex: 1 1 80%;
+    display: block;
   }
 }
