@@ -1,6 +1,6 @@
 <template>
   <article class="work-card">
-    <p class="date">{{ `${formatDate(work.startDate)} -${formatDate(work.endDate)} `}}</p>
+    <p class="date">{{ `${formatDate(work.startDate)} - ${formatDate(work.endDate)} `}}</p>
     <div>
       <a :href="work.link" target="_blank">{{ `${work.position} - ${work.company}` }}</a>
       <p>{{ work.description }}</p>

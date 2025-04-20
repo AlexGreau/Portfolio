@@ -193,8 +193,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
     padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 0 45%;
-    min-width: 450px;
+    flex: 0 1 45%;
     gap: 24px;
     flex-direction: column;
     height: 100vh;
@@ -303,8 +302,8 @@ const WorkExperiences = ref<Array<WorkExp>>([
     & > article.experiences-wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       gap: 24px;
       margin-top: 20px;
       margin-bottom: 20px;

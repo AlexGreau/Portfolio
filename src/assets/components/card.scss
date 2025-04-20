@@ -46,10 +46,12 @@
   flex-wrap: wrap;
   gap: 1rem;
   & > p {
-    flex: 1 0 15%;
+    flex: 0 0 10rem;
+
   }
   & > div {
-    flex: 1 1 80%;
+    flex: 1 1 calc(90% - 10rem);
     display: block;
+    min-width: 348px;
   }
 }
