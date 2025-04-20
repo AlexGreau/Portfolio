@@ -81,9 +81,9 @@
           dev.
         </p>
       </article>
-      <article class="experiences-wrapper" id="experiences">
+      <div class="experiences-wrapper" id="experiences">
         <WorkExperienceCard v-for="work in WorkExperiences" :key="work.id" :work="work" />
-      </article>
+      </div>
       <article class="projects" id="projects">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
       </article>
@@ -351,7 +351,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       }
     }
 
-    & > article.experiences-wrapper {
+    & > div.experiences-wrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -360,6 +360,12 @@ const WorkExperiences = ref<Array<WorkExp>>([
       margin-top: 20px;
       margin-bottom: 20px;
       padding: 0px;
+      &:hover .work-card {
+        opacity: 0.4;
+      }
+      .work-card:hover {
+        opacity: 1;
+      }
     }
 
     & > article.projects {

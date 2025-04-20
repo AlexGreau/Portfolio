@@ -45,13 +45,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 1.33rem 1rem;
+  transition: all 0.3s ease;
   & > p {
-    flex: 0 0 10rem;
-
+    flex: 0 0 9rem;
+    font-size: 0.8em;
   }
   & > div {
     flex: 1 1 calc(90% - 10rem);
     display: block;
     min-width: 348px;
+  }
+  &:hover {
+    background-color: var(--color-surface-container);
+    color: var(--color-on-surface);
+    border-radius: 1rem;
   }
 }
