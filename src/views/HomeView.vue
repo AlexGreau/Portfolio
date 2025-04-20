@@ -73,7 +73,7 @@
         <li></li>
       </ul>
     </section>
-    <section class="content-wrapper">
+    <div class="content-wrapper">
       <article class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
@@ -87,7 +87,7 @@
       <article class="projects" id="projects">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
       </article>
-    </section>
+    </div>
   </main>
 </template>
 <script setup lang="ts">
@@ -146,34 +146,86 @@ const projects = ref<Array<Project>>([
 
 const WorkExperiences = ref<Array<WorkExp>>([
   {
-    company: 'Company A',
+    company: 'Triple-A',
+    link: 'https://triple-a.io/',
     position: 'Front-end developer',
-    startDate: new Date('2022-01-01'),
-    endDate: new Date('2023-01-01'),
-    description: 'Worked on various projects using Vue.js and TypeScript.',
-    techs: [
-      TechName.VUE,
-      TechName.TS,
-      TechName.HTML,
-      TechName.CSS,
-      TechName.SCSS,
+    startDate: new Date('2022-06-06'),
+    endDate: undefined,
+    description: 'Enabling merchant to accept crypto payments.',
+    tasks: [
+      "Developing a client facing Dashboard, increasing visibility and control over merchant's own crypto-transactions.",
+      "Enhancing payment gateways' UX and performance (Conversion rate, Accessibility, Core Web Vitals).",
+      'Leading Front-end development, and ensuring Code quality by enforcing good practices and testing.',
+      'In charge of Data collection and Data Analysis, enabling business and user insights.',
+      'Driving innovation through A/B testing and user experiments, fostering data-driven decision-making.',
+      'Optimized legacy code readability and performance by refactoring the code base. Followed Atomic design, semantic web and lean CSS principles.',
     ],
+    techs: [TechName.VUE, TechName.TS, TechName.HTML, TechName.CSS, TechName.SCSS],
     id: 1,
   },
   {
-    company: 'Company B',
-    position: 'Full-stack developer',
-    startDate: new Date('2023-01-01'),
-    endDate: new Date('2024-01-01'),
-    description: 'Worked on various projects using React and Node.js.',
-    techs: [
-      TechName.REACT,
-      TechName.NODE,
-      TechName.TS,
-      TechName.HTML,
-      TechName.CSS,
+    company: 'Amadeus',
+    position: 'Data Analyst',
+    link: 'https://www.amadeus.com/',
+    startDate: new Date('2021-05'),
+    endDate: new Date('2022-05'),
+    description: 'In the AIR Digital Analytics team (second time)',
+    tasks: [
+      "Set up and interpretation of user behavior analytics on Airlines' websites (A/B testing, Core Web Vitals, Heatmap, rage clicks, excessive scrolling etc).",
+      'Implemented analytics tracking solutions for 10+ Airlines including Finnair, South African, Malaysian Airlines, Avianca, etc. Designed and tested new features and maintained the solution to provide valuable insight to clients.',
+      'Led in communication with the client and coordination with their development team.',
+      "Contributed to the development of Amadeus' Analytics tracking solution (new features + maintenance).",
+      'SAFe methodology (Scaled Agile Framework).',
     ],
+    techs: [TechName.JS, TechName.TS, TechName.JEST, TechName.GA, TechName.GTM, TechName.ADOBE, TechName.CLARITY],
     id: 2,
+  },
+  {
+    company: 'CMA-CGM',
+    position: 'Web integrator',
+    link: 'https://www.cma-cgm.com/',
+    startDate: new Date('2020-08'),
+    endDate: new Date('2021-05'),
+    description: '',
+    tasks: [
+      'Integrated 7+ responsive pages compatible with Firefox, Chrome, IE11 and Edge on the official CMA-CGM website, improving performances and maintaining accessibility for millions of users.',
+      'Validated the design team mockups (feasibility & estimations).',
+      'Bridged the design and development team, enabling mutual understanding and ensuring the match between the product and user requirements.',
+      'Post-delivery support (rework & fixes) for the development and design teams.',
+    ],
+    techs: [TechName.HTML, TechName.CSS, TechName.VUE],
+    id: 3,
+  },
+  {
+    company: 'Amadeus',
+    position: 'Data Analyst',
+    link: 'https://www.amadeus.com/',
+    startDate: new Date('2020-08'),
+    endDate: new Date('2021-05'),
+    description: 'In the AIR Digital Analytics team',
+    tasks: [
+      'In charge of the implementation of analytics tracking solutions for 10+ Airlines (Google Analytics and Google Tag Manager).',
+      'Led in communication with the client and coordination with their development team.',
+      'Designed and tested new features and maintained the Amadeus tracking solution to provide valuable insight to clients.',
+      'SAFe methodology (Scaled Agile Framework).',
+    ],
+    techs: [TechName.JS, TechName.JEST, TechName.GA, TechName.GTM],
+    id: 4,
+  },
+  {
+    company: 'Singapore University of Technology and Design',
+    position: 'Web integrator',
+    link: 'https://www.sutd.edu.sg/',
+    startDate: new Date('2020-08'),
+    endDate: new Date('2021-05'),
+    description:
+      "My Master's degree end-of-study internship on the subject 'New Interaction Techniques for Athletes'.",
+    tasks: [
+      'Developed an Android wearables app to help an Ultimate frisbee team learn game strategies.',
+      'Conducted user testing to find which modality and language to use to convey directional information. A mix of haptic and visual modalities improved the accuracy and success rate of information.',
+    ],
+    techs: [TechName.ANDROID, TechName.WEAROS, TechName.JAVA],
+    id: 5,
   },
 ])
 </script>
@@ -284,7 +336,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
     }
   }
 
-  & > section.content-wrapper {
+  & > div.content-wrapper {
     flex: 1 1 50%;
     & > article.about-wrapper {
       margin-top: 20px;
