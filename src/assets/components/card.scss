@@ -50,12 +50,24 @@
   & > p {
     flex: 0 0 9rem;
     font-size: 0.8em;
+    text-transform: uppercase;
   }
   & > div {
     flex: 1 1 calc(90% - 10rem);
     display: block;
     min-width: 348px;
+    ul.tech-stack {
+      margin-top: 1rem;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: $spacing-sm;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
   }
+
   &:hover {
     background-color: var(--color-surface-container);
     color: var(--color-on-surface);

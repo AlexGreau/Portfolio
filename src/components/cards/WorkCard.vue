@@ -7,7 +7,7 @@
       <ul>
         <li v-for="(item, index) in work.tasks" :key="index">{{ item }}</li>
       </ul>
-      <ul>
+      <ul class="tech-stack">
         <li v-for="(tech, index) in work.techs" :key="index" class="pill">{{ tech }}</li>
       </ul>
     </div>
