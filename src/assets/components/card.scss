@@ -42,30 +42,29 @@
 }
 
 .work-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: block;
   padding: 1.33rem 1rem;
   transition: all 0.3s ease;
-  & > p {
-    flex: 0 0 9rem;
-    font-size: 0.8em;
-    text-transform: uppercase;
-  }
   & > div {
-    flex: 1 1 calc(90% - 10rem);
-    display: block;
-    min-width: 348px;
-    ul.tech-stack {
-      margin-top: 1rem;
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: $spacing-sm;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    & > span {
+      font-size: 0.8em;
+      text-transform: uppercase;
     }
+  }
+  
+  ul.tech-stack {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   &:hover {

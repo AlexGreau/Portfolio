@@ -15,6 +15,8 @@ export enum TechName {
     TS = "TypeScript",
     REACT = "React",
     VUE = "Vue",
+    ANGULAR = "Angular",
+    LARAVEL = "PHP(Laravel)",
     SVELTE = "Svelte",
     NODE = "Node.js",
     EXPRESS = "Express.js",
@@ -27,4 +29,5 @@ export enum TechName {
     GTM = "Google Tag Manager",
     ADOBE = "Adobe Analytics",
     CLARITY = "Clarity",
+    DOCKER = "Docker",
 }

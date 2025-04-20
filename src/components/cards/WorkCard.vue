@@ -1,8 +1,9 @@
 <template>
   <article class="work-card">
-    <p class="date">{{ formatDoubleDates(work.startDate, work.endDate) }}</p>
     <div>
       <a :href="work.link" target="_blank">{{ `${work.position} - ${work.company}` }}</a>
+      <span class="date">{{ formatDoubleDates(work.startDate, work.endDate) }}</span>
+    </div>
       <p>{{ work.description }}</p>
       <ul>
         <li v-for="(item, index) in work.tasks" :key="index">{{ item }}</li>
@@ -10,7 +11,7 @@
       <ul class="tech-stack">
         <li v-for="(tech, index) in work.techs" :key="index" class="pill">{{ tech }}</li>
       </ul>
-    </div>
+    
   </article>
 </template>
 <script lang="ts">
