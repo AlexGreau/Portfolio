@@ -1,64 +1,105 @@
 // Styling o f all the headers and other text elements
 // in the application
+// used https://typescale.com/ for the values
 
 // import of font
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+:root {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
 // headers margins
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   font-family: 'Chakra Petch', sans-serif;
+  font-size: clamp(var(--min), var(--val), var(--max));
+  letter-spacing: var(--letter-spacing, 0px);
 }
 
 h1 {
-  font-size: 86px;
-  letter-spacing: -1.5px;
+  //   font-size: 86px;
+  --letter-spacing: -1.5px;
+  --min: 2.986rem;
+  --val: 3vw; /* preferred value = 5% viewport width */
+  //--max: 5.61rem;
+  --max: 3.815rem;
 }
 
 h2 {
-  font-size: 54px;
-  letter-spacing: -0.5px;
+  //   font-size: 54px;
+  --letter-spacing: -0.5px;
+  --min: 2.488rem;
+  --val: 5vw;
+  --max: 3.052rem;
 }
 
 h3 {
-    font-size: 43px;
-    letter-spacing: 0px;
+  //   font-size: 43px;
+  --letter-spacing: 0px;
+  --min: 2.074rem;
+  --val: 4vw;
+  --max: 2.441rem;
 }
 
 h4 {
-    font-size: 31px;
-    letter-spacing: 0.25px;
+  //   font-size: 31px;
+  --letter-spacing: 0.25px;
+  --min: 1.728rem;
+  --val: 4vw;
+  --max: 1.953rem;
 }
 
 h5 {
-    font-size: 22px;
-    letter-spacing: 0px;
+  //   font-size: 22px;
+  --letter-spacing: 0px;
+  --min: 1.44rem;
+  --val: 4vw;
+  --max: 1.563rem;
 }
 
 h6 {
-    font-size: 18px;
-    letter-spacing: 0.15px;
+  //   font-size: 18px;
+  --letter-spacing: 0.15px;
+  --min: 1.2rem;
+  --val: 4vw;
+  --max: 1.25rem;
+}
+
+small {
+  --letter-spacing: 0.4px;
+  --min: 0.833rem;
+  --val: 0.833rem;
+  --max: 0.833rem;
 }
 
 .subtitle {
-    font-size: 14px;
-    letter-spacing: 0.15px;
-}
-
-:root {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+  //   font-size: 14px;
+  --letter-spacing: 0.15px;
+  --min: 1.5rem;
+  --val: 4vw;
+  --max: 2.25rem;
 }
 
 button {
-    font-size: 13px;
-    letter-spacing: 1.25px;
+  font-size: 13px;
+  letter-spacing: 1.25px;
 }
 
 caption {
-    font-size: 11px;
-    letter-spacing: 0.4px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
