@@ -50,12 +50,37 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    & > a {
+      text-decoration: none;
+      color: var(--color-on-surface);
+      font-weight: 600;
+      font-size: 1.2em;
+      position: relative;
+      &::after {
+        position: relative;
+        top: 4px;
+        left: 0px;
+        height: 24px;
+        width: 24px;
+        margin-left: 3px;
+        content: '';
+        background-color: var(--color-primary);
+        -webkit-mask: url('@/assets/icons/arrows/ne.svg') no-repeat center;
+        mask: url('@/assets/icons/arrows/ne.svg') no-repeat center;
+        mask-size: contain;
+        align-items: center;
+        // background-image: ;
+        display: inline-block;
+        transition: all 0.3s ease;
+        transform: scale(0.6);
+      }
+    }
     & > span {
       font-size: 0.8em;
       text-transform: uppercase;
     }
   }
-  
+
   ul.tech-stack {
     margin-top: 1rem;
     list-style: none;
@@ -71,5 +96,8 @@
     background-color: var(--color-surface-container);
     color: var(--color-on-surface);
     border-radius: 1rem;
+    & > div > a::after {
+      transform: scale(0.8);
+    }
   }
 }

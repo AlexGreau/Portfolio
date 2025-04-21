@@ -11,7 +11,6 @@
       <ul class="tech-stack">
         <li v-for="(tech, index) in work.techs" :key="index" class="pill">{{ tech }}</li>
       </ul>
-    
   </article>
 </template>
 <script lang="ts">
