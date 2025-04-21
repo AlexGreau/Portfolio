@@ -252,12 +252,12 @@ const WorkExperiences = ref<Array<WorkExp>>([
   justify-content: center;
   width: 100%;
   gap: 1rem;
-  padding: 0px 1.5rem;
+  padding: 6rem 1.5rem;
   & > section.hero-wrapper {
     padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex: 0 1 45%;
+    flex: 0 1 40%;
     gap: 24px;
     flex-direction: column;
     height: 100vh;
