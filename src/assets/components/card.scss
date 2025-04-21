@@ -54,8 +54,9 @@
       text-decoration: none;
       color: var(--color-on-surface);
       font-weight: 600;
-      font-size: 1.2em;
+      font-size: 1.25rem;
       position: relative;
+      transition: all 0.3s ease;
       &::after {
         position: relative;
         top: 4px;
@@ -96,8 +97,11 @@
     background-color: var(--color-surface-container);
     color: var(--color-on-surface);
     border-radius: 1rem;
-    & > div > a::after {
-      transform: scale(0.8);
+    & > div > a {
+      color: var(--color-primary);
+      &::after {
+        transform: scale(0.8);
+      }
     }
   }
 }
