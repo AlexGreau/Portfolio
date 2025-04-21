@@ -47,6 +47,7 @@
   transition: all 0.3s ease;
   & > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
