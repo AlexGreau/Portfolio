@@ -122,7 +122,7 @@ const projects = ref<Array<Project>>([
   {
     id: 1,
     name: 'Portfolio Website',
-    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
+    techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
     status: 'Completed',
     description: 'A personal portfolio website to showcase my projects and skills.',
     image: '../assets/img/portfolio.png',
@@ -131,14 +131,7 @@ const projects = ref<Array<Project>>([
   {
     id: 2,
     name: 'Workout timer',
-    techStack: [
-      TechName.REACT,
-      TechName.TS,
-      TechName.FIGMA,
-      TechName.AWS,
-      TechName.HTML,
-      TechName.CSS,
-    ],
+    techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
     status: 'In Progress',
     description: 'A workout helper to plan and execute your workouts.',
     image: '../assets/img/task-manager.png',
@@ -147,7 +140,7 @@ const projects = ref<Array<Project>>([
   {
     id: 3,
     name: 'Swim coach website',
-    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
+    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
     status: 'To do',
     description: 'My swim coaching services and how to reach out to me.',
     image: '../assets/img/task-manager.png',
@@ -156,7 +149,7 @@ const projects = ref<Array<Project>>([
   {
     id: 4,
     name: 'Cook assistant',
-    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML, TechName.CSS, TechName.TS],
+    techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
     status: 'To do',
     description: 'A cooking assistant to help you cook your meals.',
     image: '../assets/img/task-manager.png',
@@ -180,7 +173,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Driving innovation through A/B testing and user experiments, fostering data-driven decision-making.',
       'Optimized legacy code readability and performance by refactoring the code base. Followed Atomic design, semantic web and lean CSS principles.',
     ],
-    techs: [TechName.VUE, TechName.TS, TechName.HTML, TechName.CSS, TechName.SCSS],
+    techs: [TechName.VUE, TechName.TS, TechName.HTML_SCSS],
     id: 1,
   },
   {
@@ -221,7 +214,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Bridged the design and development team, enabling mutual understanding and ensuring the match between the product and user requirements.',
       'Post-delivery support (rework & fixes) for the development and design teams.',
     ],
-    techs: [TechName.HTML, TechName.CSS, TechName.VUE],
+    techs: [TechName.HTML_SCSS, TechName.VUE],
     id: 3,
   },
   {
