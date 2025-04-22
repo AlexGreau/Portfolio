@@ -1,17 +1,50 @@
-@use "@/assets/common/variables.scss" as *; // Import variables
+@use '@/assets/common/variables.scss' as *; // Import variables
 
 .pill {
-    display: inline-block;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: 1em;
-    background-color: var(--color-tertiary-container);
-    color: var(--color-on-tertiary-container);
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: 1em;
+  background-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary-container);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
+  }
+
+  &.success {
+    background-color: var(--color-success-container);
+    color: var(--color-on-success-container);
     &:hover {
-        background-color: var(--color-tertiary);
-        color: var(--color-on-tertiary);
+      background-color: var(--color-success);
+      color: var(--color-on-success);
     }
+  }
+  &.error {
+    background-color: var(--color-error-container);
+    color: var(--color-on-error-container);
+    &:hover {
+      background-color: var(--color-error);
+      color: var(--color-on-error);
+    }
+  }
+  &.progress {
+    background-color: var(--color-warning-container);
+    color: var(--color-on-warning-container);
+    &:hover {
+      background-color: var(--color-warning);
+      color: var(--color-on-warning);
+    }
+  }
+  &.disabled {
+    background-color: var(--color-surface-container);
+    color: var(--color-on-surface-container);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
