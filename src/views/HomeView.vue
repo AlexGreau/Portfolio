@@ -117,13 +117,14 @@ import { ref } from 'vue'
 import type { Project } from '@/model/Project'
 import { TechName } from '@/model/Tech'
 import { type WorkExp } from '@/model/WorkExp'
+import { Status } from '@/model/Status'
 
 const projects = ref<Array<Project>>([
   {
     id: 1,
     name: 'Portfolio Website',
     techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
-    status: 'Completed',
+    status: Status.IN_PROGRESS,
     description: 'A personal portfolio website to showcase my projects and skills.',
     image: '../assets/img/portfolio.png',
     route: '/projects/portfolio',
@@ -132,7 +133,7 @@ const projects = ref<Array<Project>>([
     id: 2,
     name: 'Workout timer',
     techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
-    status: 'In Progress',
+    status: Status.IN_PROGRESS,
     description: 'A workout helper to plan and execute your workouts.',
     image: '../assets/img/task-manager.png',
     route: '/projects/workout-timer',
@@ -141,7 +142,7 @@ const projects = ref<Array<Project>>([
     id: 3,
     name: 'Swim coach website',
     techStack: [TechName.VUE, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
-    status: 'To do',
+    status: Status.TO_DO,
     description: 'My swim coaching services and how to reach out to me.',
     image: '../assets/img/task-manager.png',
     route: '/projects/swim-coach',
@@ -150,7 +151,7 @@ const projects = ref<Array<Project>>([
     id: 4,
     name: 'Cook assistant',
     techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
-    status: 'To do',
+    status: Status.TO_DO,
     description: 'A cooking assistant to help you cook your meals.',
     image: '../assets/img/task-manager.png',
     route: '/projects/cook-assistant',
