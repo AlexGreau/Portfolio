@@ -1,12 +1,13 @@
 <template>
   <main class="main-wrapper">
     <section class="hero-wrapper">
-      <h1>Alexandre Gréau</h1>
-      <h4>Front-end developer</h4>
+      <div>
+        <h1>Alexandre Gréau</h1>
+        <h2>Front-end engineer</h2>
+      </div>
       <p>
-        aka Alex, Front-end developer and UX enthusiast based in Singapore.<br />
-        Some of my personal explorations and useful creations are exposed here.<br />
-        Have a look, and reach out to say hi!
+        aka Alex, based in Singapore.<br />
+        I build accessible, performant and user-friendly apps for the web.
       </p>
       <nav>
         <ul>
@@ -101,6 +102,10 @@
         <p>
           Small paragraph about me. What's more? Be a human and have more dimensions than just a
           dev.
+
+          <br />
+          Some of my personal explorations and useful creations are exposed here.<br />
+          Have a look, and reach out to say hi!
         </p>
       </section>
       <section class="experiences-wrapper card-container" id="experiences">
@@ -310,7 +315,6 @@ onBeforeUnmount(() => {
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 40%;
-    gap: 24px;
     flex-direction: column;
     height: 100vh;
     position: sticky;
@@ -320,16 +324,22 @@ onBeforeUnmount(() => {
     h1 {
       margin-bottom: 0px;
       width: 100%;
+      font-size: clamp(3.052rem, 5vw, 3.815rem);
+      line-height: 1;
     }
     h2 {
       width: 100%;
+      font-size: clamp(1.563rem, 5vw, 1.953rem);
+      margin-top: 0.75rem;
     }
     p {
-      margin: 0px;
       width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     & > nav {
       width: 100%;
+      margin-top: 2rem;
       ul {
         display: flex;
         flex-direction: column;
@@ -417,7 +427,6 @@ onBeforeUnmount(() => {
     flex: 1 1 50%;
     padding-top: 6rem;
     & > section.about-wrapper {
-      margin-top: 20px;
       margin-bottom: 20px;
       padding: 0px;
       h1 {
@@ -459,6 +468,7 @@ onBeforeUnmount(() => {
   .main-wrapper {
     flex-direction: column;
     & > section.hero-wrapper {
+      padding-top: 2rem;
       position: static;
       height: auto;
       max-height: none;
@@ -467,7 +477,13 @@ onBeforeUnmount(() => {
       }
       & > ul {
         margin-top: 0px;
+        li a {
+          font-size: 1em;
+        }
       }
+    }
+    & > div.content-wrapper {
+      padding-top: 0;
     }
   }
 }

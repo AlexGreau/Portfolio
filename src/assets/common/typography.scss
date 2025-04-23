@@ -28,50 +28,49 @@ h6 {
 h1 {
   //   font-size: 86px;
   --letter-spacing: -1.5px;
-  --min: 2.986rem;
+  --max: 2.986rem;
   --val: 3vw; /* preferred value = 5% viewport width */
-  //--max: 5.61rem;
-  --max: 3.815rem;
+  --min: 2.027rem;
 }
 
 h2 {
   //   font-size: 54px;
   --letter-spacing: -0.5px;
-  --min: 2.488rem;
-  --val: 5vw;
-  --max: 3.052rem;
+  --max: 2.488rem;
+  --val: 2vw;
+  --min: 1.802rem;
 }
 
 h3 {
   //   font-size: 43px;
   --letter-spacing: 0px;
-  --min: 2.074rem;
-  --val: 4vw;
-  --max: 2.441rem;
+  --max: 2.074rem;
+  --val: 1.7vw;
+  --min: 1.602rem;
 }
 
 h4 {
   //   font-size: 31px;
   --letter-spacing: 0.25px;
-  --min: 1.728rem;
-  --val: 4vw;
-  --max: 1.953rem;
+  --max: 1.728rem;
+  --val: 1.5vw;
+  --min: 1.424rem;
 }
 
 h5 {
   //   font-size: 22px;
   --letter-spacing: 0px;
-  --min: 1.44rem;
-  --val: 4vw;
-  --max: 1.563rem;
+  --max: 1.44rem;
+  --val: 1.2vw;
+  --min: 1.266rem;
 }
 
 h6 {
   //   font-size: 18px;
   --letter-spacing: 0.15px;
-  --min: 1.2rem;
-  --val: 4vw;
-  --max: 1.25rem;
+  --max: 1.2rem;
+  --val: 1vw;
+  --min: 1.125rem;
 }
 
 small {
