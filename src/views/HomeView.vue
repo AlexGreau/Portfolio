@@ -169,7 +169,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Front-end developer',
+    position: 'Front-end engineer',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
     description: 'Enabling merchant to accept crypto payments.',
@@ -227,7 +227,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   },
   {
     company: 'Amadeus',
-    position: 'Full-stack developer',
+    position: 'Full-stack engineer',
     link: 'https://www.amadeus.com/',
     startDate: new Date('2019-10'),
     endDate: new Date('2021-08'),
