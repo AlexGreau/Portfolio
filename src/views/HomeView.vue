@@ -11,13 +11,15 @@
       <nav>
         <ul>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" :class="{ active: currentSection === 'about' }">About</a>
           </li>
           <li>
-            <a href="#experiences">Experience</a>
+            <a href="#experiences" :class="{ active: currentSection === 'experiences' }">
+              Experience
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" :class="{ active: currentSection === 'projects' }">Projects</a>
           </li>
         </ul>
       </nav>
@@ -94,26 +96,26 @@
       </ul>
     </section>
     <div class="content-wrapper">
-      <article class="about-wrapper" id="about">
+      <section class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
           Small paragraph about me. What's more? Be a human and have more dimensions than just a
           dev.
         </p>
-      </article>
-      <div class="experiences-wrapper card-container" id="experiences">
+      </section>
+      <section class="experiences-wrapper card-container" id="experiences">
         <WorkExperienceCard v-for="work in WorkExperiences" :key="work.id" :work="work" />
-      </div>
-      <div class="projects-wrapper card-container" id="projects">
+      </section>
+      <section class="projects-wrapper card-container" id="projects">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
-      </div>
+      </section>
     </div>
   </main>
 </template>
 <script setup lang="ts">
 import ProjectCard from '@/components/cards/ProjectCard.vue'
 import WorkExperienceCard from '@/components/cards/WorkCard.vue'
-import { ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import type { Project } from '@/model/Project'
 import { TechName } from '@/model/Tech'
 import { type WorkExp } from '@/model/WorkExp'
@@ -262,6 +264,33 @@ const WorkExperiences = ref<Array<WorkExp>>([
     id: 5,
   },
 ])
+
+const currentSection = ref('')
+
+let observer: IntersectionObserver
+
+onMounted(() => {
+  const sections = document.querySelectorAll('section')
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          currentSection.value = entry.target.id
+        }
+      })
+    },
+    {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // 50% of section must be visible
+    },
+  )
+  sections.forEach((section) => observer.observe(section))
+})
+
+onBeforeUnmount(() => {
+  observer.disconnect()
+})
 </script>
 
 <style lang="scss">
@@ -316,6 +345,25 @@ const WorkExperiences = ref<Array<WorkExp>>([
             display: inline-flex;
             align-items: center;
             gap: 3px;
+            &::before {
+              content: '';
+              display: inline-block;
+              margin-right: 0.5rem;
+              position: relative;
+              left: 0;
+              bottom: 50%;
+              width: 2rem;
+              height: 0;
+              border-bottom: 2px solid var(--color-primary);
+              transition: width 0.1s ease;
+            }
+
+            &:hover,
+            &.active {
+              &::before {
+                width: 4rem;
+              }
+            }
           }
         }
       }
@@ -368,7 +416,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   & > div.content-wrapper {
     flex: 1 1 50%;
     padding-top: 6rem;
-    & > article.about-wrapper {
+    & > section.about-wrapper {
       margin-top: 20px;
       margin-bottom: 20px;
       padding: 0px;
@@ -381,7 +429,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       }
     }
 
-    & > div.experiences-wrapper {
+    & > section.experiences-wrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -392,7 +440,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       padding: 0px;
     }
 
-    & > div.projects-wrapper {
+    & > section.projects-wrapper {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
