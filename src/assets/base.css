@@ -68,6 +68,7 @@
   --typeface-brand: 'Chakra Petch';
   --typeface-plain: system-ui;
   --section-gap: 160px;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
