@@ -100,12 +100,20 @@
       <section class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
-          Small paragraph about me. What's more? Be a human and have more dimensions than just a
-          dev.
-
-          <br />
-          Some of my personal explorations and useful creations are exposed here.<br />
-          Have a look, and reach out to say hi!
+          Hi, I’m Alex, a developer passionate about building accessible, intuitive digital
+          experiences that genuinely help people. This site reflects both my professional journey
+          and the values that guide my work: thoughtful design, meaningful technology, and creating
+          tools that make a real difference in everyday life.
+        </p>
+        <p>
+          Outside of coding, I’m also a swim coach, where I focus on teaching, communication, and
+          continuous improvement. Whether I’m guiding someone in the pool or building software, I’m
+          driven by a desire to make things better and more human-centered.
+        </p>
+        <p>
+          Feel free to explore my portfolio. You’ll find projects, experience, and a glimpse into
+          how I approach problem-solving. I hope it gives you a clear sense of who I am and how I
+          can contribute.
         </p>
       </section>
       <section class="experiences-wrapper card-container" id="experiences">
@@ -169,7 +177,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Front-end developer',
+    position: 'Front-end engineer',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
     description: 'Enabling merchant to accept crypto payments.',
@@ -227,7 +235,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   },
   {
     company: 'Amadeus',
-    position: 'Full-stack developer',
+    position: 'Full-stack engineer',
     link: 'https://www.amadeus.com/',
     startDate: new Date('2019-10'),
     endDate: new Date('2021-08'),
