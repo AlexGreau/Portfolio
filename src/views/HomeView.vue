@@ -5,10 +5,7 @@
         <h1>Alexandre Gréau</h1>
         <h2>Front-end engineer</h2>
       </div>
-      <p>
-        aka Alex, based in Singapore.<br />
-        I build accessible, performant and user-friendly apps for the web.
-      </p>
+      <p>I build accessible, performant and user-friendly apps for the web.</p>
       <nav>
         <ul>
           <li>
@@ -100,10 +97,11 @@
       <section class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
-          Hi, I’m Alex, a developer passionate about building accessible, intuitive digital
-          experiences that genuinely help people. This site reflects both my professional journey
-          and the values that guide my work: thoughtful design, meaningful technology, and creating
-          tools that make a real difference in everyday life.
+          Hi, I’m Alex, a developer who cares deeply about building accessible and user-friendly
+          digital experiences. With several years of experience in front-end development, I focus on
+          creating tools that are thoughtful, inclusive, and genuinely helpful. This portfolio
+          reflects where I’m at now, where I’m headed, and the kind of work I’m excited to do more
+          of.
         </p>
         <p>
           Outside of coding, I’m also a swim coach, where I focus on teaching, communication, and
@@ -342,6 +340,7 @@ onBeforeUnmount(() => {
     }
     p {
       width: 100%;
+      max-width: 400px;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
@@ -433,7 +432,7 @@ onBeforeUnmount(() => {
 
   & > div.content-wrapper {
     flex: 1 1 50%;
-    padding-top: 6rem;
+    padding-top: 8rem;
     & > section.about-wrapper {
       margin-bottom: 20px;
       padding: 0px;
