@@ -38,11 +38,9 @@ I had to choose between having pure CSS variables and them, or importing the com
 
 ## Infrastructure
 Keeping it lean but under control. Unit tests and E2E tests are overkill for this project, but it helps me code and double check that i am not breaking anything since this is higher visibility.
-### CI/CD
-Testing and how i deploy new versions
-
-### Hosting
+### CI/CD an Hosting
 Hosted on Github for simplicity, cost effectiveness, and since it doesnt require backend.
+I am using Github actions to deploy automatically. Each merge to main triggers a build and a commit the static files to the branch `gh-pages` which is then deployed.
 
 ## Other commands
 
