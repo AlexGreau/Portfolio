@@ -137,38 +137,38 @@ const projects = ref<Array<Project>>([
     id: 1,
     name: 'Portfolio Website',
     techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
-    status: Status.IN_PROGRESS,
+    status: Status.COMPLETED,
     description: 'A personal portfolio website to showcase my projects and skills.',
     image: '../assets/img/portfolio.png',
-    route: '/projects/portfolio',
+    link: 'https://github.com/AlexGreau/Portfolio',
   },
-  {
-    id: 2,
-    name: 'Workout timer',
-    techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
-    status: Status.IN_PROGRESS,
-    description: 'A workout helper to plan and execute your workouts.',
-    image: '../assets/img/task-manager.png',
-    route: '/projects/workout-timer',
-  },
-  {
-    id: 3,
-    name: 'Swim coach website',
-    techStack: [TechName.VUE, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
-    status: Status.TO_DO,
-    description: 'My swim coaching services and how to reach out to me.',
-    image: '../assets/img/task-manager.png',
-    route: '/projects/swim-coach',
-  },
-  {
-    id: 4,
-    name: 'Cook assistant',
-    techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
-    status: Status.TO_DO,
-    description: 'A cooking assistant to help you cook your meals.',
-    image: '../assets/img/task-manager.png',
-    route: '/projects/cook-assistant',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Workout timer',
+  //   techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
+  //   status: Status.IN_PROGRESS,
+  //   description: 'A workout helper to plan and execute your workouts.',
+  //   image: '../assets/img/task-manager.png',
+  //   link: '/projects/workout-timer',
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Swim coach website',
+  //   techStack: [TechName.VUE, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
+  //   status: Status.TO_DO,
+  //   description: 'My swim coaching services and how to reach out to me.',
+  //   image: '../assets/img/task-manager.png',
+  //   link: '/projects/swim-coach',
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Cook assistant',
+  //   techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
+  //   status: Status.TO_DO,
+  //   description: 'A cooking assistant to help you cook your meals.',
+  //   image: '../assets/img/task-manager.png',
+  //   link: '/projects/cook-assistant',
+  // },
 ])
 
 const WorkExperiences = ref<Array<WorkExp>>([
@@ -293,7 +293,7 @@ onMounted(() => {
     {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3, // 30% of section must be visible
+      threshold: 0.4, // 30% of section must be visible
     },
   )
   sections.forEach((section) => observer.observe(section))

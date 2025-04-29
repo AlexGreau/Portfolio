@@ -1,6 +1,6 @@
 <template>
   <article class="card project">
-    <router-link v-if="project.route" :to="project.route">{{ project.name }}</router-link>
+    <a v-if="project.link" :href="project.link" target="_blank">{{ project.name }}</a>
     <p>{{ project.description }}</p>
     <ul class="tech-stack">
       <li class="pill" :class="getStatusPillClass(project.status)" v-if="project.status">
@@ -13,7 +13,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { Project } from '../../model/Project'
-import { RouterLink } from 'vue-router'
 import { Status } from '@/model/Status'
 
 export default defineComponent({

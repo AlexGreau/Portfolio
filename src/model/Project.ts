@@ -6,7 +6,7 @@ export interface Project {
   status: Status
   id: number
   techStack: TechName[]
-  route?: string
+  link?: string
   description?: string
   image?: string
 }
