@@ -24,7 +24,7 @@
       <ul>
         <li>
           <a
-            href="https://drive.google.com/file/d/1DEd9sTz8nBU5GiNecM1OBAAv88Kr_LZM/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1DEd9sTz8nBU5GiNecM1OBAAv88Kr_LZM/view?usp=sharing"
             target="_blank"
           >
             <!-- inline since it has semantic value + color changes-->
