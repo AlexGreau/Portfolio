@@ -1,5 +1,5 @@
 <template>
-  <main class="main-wrapper">
+  <main class="main-wrapper" id="top">
     <section class="hero-wrapper">
       <div>
         <h1>Alexandre Gréau</h1>

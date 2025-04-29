@@ -1,12 +1,14 @@
 <template>
- <!-- <Header /> -->
+  <!-- <Header /> -->
   <HaloCursor />
-  <RouterView id="app-wrapper"/>
+  <RouterView id="app-wrapper" />
+  <BackToTopButton />
   <!-- <Footer /> -->
 </template>
 
 <style lang="scss">
-#app { // id used in mains.ts to mount
+#app {
+  // id used in mains.ts to mount
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -22,10 +24,10 @@ body {
 </style>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import Footer from './components/layout/Footer.vue';
-import '@material/web/button/filled-button.js';
-import '@material/web/button/outlined-button.js';
-import HaloCursor from '@/components/common/HaloCursor.vue';
-
+import { RouterView } from 'vue-router'
+import Footer from './components/layout/Footer.vue'
+import '@material/web/button/filled-button.js'
+import '@material/web/button/outlined-button.js'
+import HaloCursor from '@/components/common/HaloCursor.vue'
+import BackToTopButton from './components/common/BackToTopButton.vue'
 </script>
