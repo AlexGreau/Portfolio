@@ -293,7 +293,7 @@ onMounted(() => {
     {
       root: null,
       rootMargin: '0px',
-      threshold: 0.4, // 30% of section must be visible
+      threshold: 0.4, // 40% of section must be visible
     },
   )
   sections.forEach((section) => observer.observe(section))
