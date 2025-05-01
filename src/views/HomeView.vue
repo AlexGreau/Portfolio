@@ -308,7 +308,6 @@ onBeforeUnmount(() => {
 @use '@/assets/common/variables.scss' as *; // Import variables
 .main-wrapper {
   display: flex;
-  // grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
@@ -319,7 +318,7 @@ onBeforeUnmount(() => {
     padding-bottom: 20px;
     padding-top: 6rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex: 0 1 40%;
     flex-direction: column;
     height: 100vh;
@@ -329,23 +328,21 @@ onBeforeUnmount(() => {
     max-height: calc(100vh - 6rem);
     h1 {
       margin-bottom: 0px;
-      width: 100%;
+      // override default font size
       font-size: clamp(3.052rem, 5vw, 3.815rem);
       line-height: 1;
     }
     h2 {
-      width: 100%;
+      // override default font size
       font-size: clamp(1.563rem, 5vw, 1.953rem);
       margin-top: 0.75rem;
     }
     p {
-      width: 100%;
       max-width: 400px;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
     & > nav {
-      width: 100%;
       margin-top: 2rem;
       ul {
         display: flex;
@@ -386,7 +383,6 @@ onBeforeUnmount(() => {
       }
     }
     & > ul {
-      width: 100%;
       // links
       margin-top: auto;
       display: flex;
