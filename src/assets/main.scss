@@ -3,6 +3,8 @@
 @use '@/assets/components/card.scss' as *;
 @use '@/assets/components/button.scss' as *;
 @use '@/assets/components/link.scss' as *;
+@import '@/assets/themes/light.css';
+@import '@/assets/themes/dark.css';
 @import './base.css';
 
 #app-wrapper {
