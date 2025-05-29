@@ -4,6 +4,7 @@
       <div>
         <h1>Alexandre Gréau</h1>
         <h2>Front-end engineer</h2>
+        <ThemeSwitch />
       </div>
       <p>I build accessible, performant and user-friendly apps for the web.</p>
       <nav>
@@ -99,14 +100,15 @@
         <p>
           Hi, I’m Alex, a developer who cares deeply about building accessible and user-friendly
           digital experiences. With several years of experience in front-end development, I focus on
-          creating tools that are thoughtful, inclusive, and genuinely helpful. This portfolio
-          reflects where I’m at now, where I’m headed, and the kind of work I’m excited to do more
-          of.
+          creating tools that are <span>thoughtful, inclusive, and genuinely helpful</span>. This
+          portfolio reflects where I’m at now, where I’m headed, and the kind of work I’m excited to
+          do more of.
         </p>
         <p>
-          Outside of coding, I’m also a swim coach, where I focus on teaching, communication, and
-          continuous improvement. Whether I’m guiding someone in the pool or building software, I’m
-          driven by a desire to make things better and more human-centered.
+          Outside of coding, I’m also a <span>swim coach</span>, where I focus on
+          <span>teaching, communication, and continuous improvement</span>. Whether I’m guiding
+          someone in the pool or building software, I’m driven by a desire to make things better and
+          more human-centered.
         </p>
         <p>
           Feel free to explore my portfolio. You’ll find projects, experience, and a glimpse into
@@ -131,6 +133,7 @@ import type { Project } from '@/model/Project'
 import { TechName } from '@/model/Tech'
 import { type WorkExp } from '@/model/WorkExp'
 import { Status } from '@/model/Status'
+import ThemeSwitch from '@/components/common/ThemeSwitch.vue'
 
 const projects = ref<Array<Project>>([
   {

@@ -61,8 +61,9 @@
   --typeface-plain: system-ui;
   --section-gap: 160px;
   scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
 }
-/* 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: rgb(64 95 144);
@@ -128,7 +129,7 @@
     --extended-color-custom-color-on-color-container: rgb(0 28 57);
     --halo-color: rgba(211, 227, 255, 0.15);
   }
-} */
+}
 
 *,
 *::before,
