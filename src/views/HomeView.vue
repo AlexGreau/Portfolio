@@ -1,10 +1,8 @@
 <template>
   <main class="main-wrapper" id="top">
     <section class="hero-wrapper">
-      <div>
-        <h1>Alexandre Gréau</h1>
-        <h2>Front-end engineer</h2>
-      </div>
+      <h1>Alexandre Gréau</h1>
+      <h2>Front-end engineer</h2>
       <p>I build accessible, performant and user-friendly apps for the web.</p>
       <nav>
         <ul>
@@ -21,6 +19,9 @@
           </li>
         </ul>
       </nav>
+      <figure>
+        <img src="../assets/img/ME.JPG" loading="lazy" class="profile-pic" alt="profile picture" />
+      </figure>
       <ul>
         <li>
           <a
@@ -103,6 +104,7 @@
           reflects where I’m at now, where I’m headed, and the kind of work I’m excited to do more
           of.
         </p>
+
         <p>
           Outside of coding, I’m also a swim coach, where I focus on teaching, communication, and
           continuous improvement. Whether I’m guiding someone in the pool or building software, I’m
@@ -344,6 +346,7 @@ onBeforeUnmount(() => {
     }
     & > nav {
       margin-top: 2rem;
+      margin-bottom: 3rem;
       ul {
         display: flex;
         flex-direction: column;
@@ -381,6 +384,12 @@ onBeforeUnmount(() => {
           }
         }
       }
+    }
+    img.profile-pic {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 1rem;
+      border-radius: 5px;
     }
     & > ul {
       // links
