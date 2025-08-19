@@ -20,7 +20,7 @@
         </ul>
       </nav>
       <figure>
-        <img src="../assets/img/ME.JPG" loading="lazy" class="profile-pic" alt="profile picture" />
+        <img :src="profilePic" loading="lazy" class="profile-pic" alt="profile picture" />
       </figure>
       <ul>
         <li>
@@ -133,6 +133,8 @@ import type { Project } from '@/model/Project'
 import { TechName } from '@/model/Tech'
 import { type WorkExp } from '@/model/WorkExp'
 import { Status } from '@/model/Status'
+
+const profilePic = new URL('@/assets/img/ME.JPG', import.meta.url).href
 
 const projects = ref<Array<Project>>([
   {
