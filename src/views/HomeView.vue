@@ -134,7 +134,7 @@ import { TechName } from '@/model/Tech'
 import { type WorkExp } from '@/model/WorkExp'
 import { Status } from '@/model/Status'
 
-const profilePic = new URL('../assets/img/ME.JPG', import.meta.url).href
+const profilePic = new URL('../assets/img/me.jpg', import.meta.url).href
 
 const projects = ref<Array<Project>>([
   {
