@@ -98,29 +98,26 @@
       <section class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
-          Welcome! I’m Alex. I love creating <strong>digital experiences</strong> that feel simple,
-          inclusive, and genuinely useful. I started out in frontend development and Human-Computer
-          Interaction, and along the way, I’ve tackled challenges like refactoring dashboards,
-          collaborating on APIs, and using analytics to make better decisions.
+          Hi, I’m Alex. I love building <strong>digital experiences</strong> that are simple,
+          inclusive, and useful. I started in frontend development and Human-Computer Interaction,
+          and I’ve since explored dashboards, APIs, and analytics to make things better for users.
         </p>
 
         <p>
-          I like to see things from the <strong>user’s perspective</strong> and build solutions that
-          balance thoughtful design with solid engineering. This approach naturally led me into
-          <strong>product engineering</strong>, where I discovered how technical choices can shape
-          real business outcomes.
+          I approach problems from the <strong>user’s perspective</strong> and aim for solutions
+          that balance design and engineering. This mindset led me into
+          <strong>product engineering</strong>, where I learned how technical choices impact real
+          outcomes.
         </p>
 
         <p>
           Outside work, I’m a <strong>swim coach</strong> and former competitive swimmer. Teaching
-          kids has taught me patience and the power of clear communication—skills I carry into every
-          project I work on.
+          kids has taught me patience and clear communication—skills I bring to every project.
         </p>
 
         <p>
-          Curious to see what we could build together?
-          <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">Drop me a message!</a> I’d love
-          to hear from you.
+          Want to create something together?
+          <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">Let’s connect!</a>
         </p>
       </section>
       <section class="experiences-wrapper card-container" id="experiences">
