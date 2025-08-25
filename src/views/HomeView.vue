@@ -25,7 +25,7 @@
       <ul>
         <li>
           <a
-            href="https://drive.google.com/file/d/1DEd9sTz8nBU5GiNecM1OBAAv88Kr_LZM/view?usp=sharing"
+            href="https://drive.google.com/file/d/1P__MkDSZ_ZVpyL0Tycvv2iw4wA4Q2t_Y/view?usp=sharing"
             target="_blank"
           >
             <!-- inline since it has semantic value + color changes-->
@@ -98,22 +98,29 @@
       <section class="about-wrapper" id="about">
         <!-- <h2>About me</h2> -->
         <p>
-          Hi, I’m Alex, a developer who cares deeply about building accessible and user-friendly
-          digital experiences. With several years of experience in front-end development, I focus on
-          creating tools that are thoughtful, inclusive, and genuinely helpful. This portfolio
-          reflects where I’m at now, where I’m headed, and the kind of work I’m excited to do more
-          of.
+          Welcome! I’m Alex. I love creating <strong>digital experiences</strong> that feel simple,
+          inclusive, and genuinely useful. I started out in frontend development and Human-Computer
+          Interaction, and along the way, I’ve tackled challenges like refactoring dashboards,
+          collaborating on APIs, and using analytics to make better decisions.
         </p>
 
         <p>
-          Outside of coding, I’m also a swim coach, where I focus on teaching, communication, and
-          continuous improvement. Whether I’m guiding someone in the pool or building software, I’m
-          driven by a desire to make things better and more human-centered.
+          I like to see things from the <strong>user’s perspective</strong> and build solutions that
+          balance thoughtful design with solid engineering. This approach naturally led me into
+          <strong>product engineering</strong>, where I discovered how technical choices can shape
+          real business outcomes.
         </p>
+
         <p>
-          Feel free to explore my portfolio. You’ll find projects, experience, and a glimpse into
-          how I approach problem-solving. I hope it gives you a clear sense of who I am and how I
-          can contribute.
+          Outside work, I’m a <strong>swim coach</strong> and former competitive swimmer. Teaching
+          kids has taught me patience and the power of clear communication—skills I carry into every
+          project I work on.
+        </p>
+
+        <p>
+          Curious to see what we could build together?
+          <a href="mailto:alexgreau@live.fr?subject=Job%20Prospect">Drop me a message!</a> I’d love
+          to hear from you.
         </p>
       </section>
       <section class="experiences-wrapper card-container" id="experiences">
@@ -179,19 +186,17 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Front-end engineer',
+    position: 'Product Engineer (Frontend-focused)',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
     description: 'Enabling merchant to accept crypto payments.',
     tasks: [
-      "Developing a client facing Dashboard, increasing visibility and control over merchant's own crypto-transactions.",
-      "Enhancing payment gateways' UX and performance (Conversion rate, Accessibility, Core Web Vitals).",
-      'Leading Front-end development, and ensuring Code quality by enforcing good practices and testing.',
-      'In charge of Data collection and Data Analysis, enabling business and user insights.',
+      'Delivered and later took ownership of a client-facing dashboard (3k+ merchants, 5k+ active users, 200k+ crypto transactions/month), contributing to a +72% revenue increase and leading a major refactor for scalability, maintainability, and UX.',
+      'Collaborated with back-end engineers to redesign APIs and optimize data flows, ensuring system resilience under high transaction volumes.',
+      'Enhanced UX and performance of payment gateways, boosting conversion by 30%.',
       'Driving innovation through A/B testing and user experiments, fostering data-driven decision-making.',
-      'Optimized legacy code readability and performance by refactoring the code base. Followed Atomic design, semantic web and lean CSS principles.',
     ],
-    techs: [TechName.VUE, TechName.TS, TechName.HTML_SCSS],
+    techs: [TechName.VUE, TechName.SVELTE, TechName.TS, TechName.HTML_SCSS, TechName.GTM],
     id: 1,
   },
   {
@@ -202,11 +207,10 @@ const WorkExperiences = ref<Array<WorkExp>>([
     endDate: new Date('2022-05'),
     description: 'In the AIR Digital Analytics team (second time)',
     tasks: [
+      'Delivered analytics tracking solutions for 10+ international airlines (including Finnair, South African Airways, Avianca, and Malaysian Airlines), providing actionable insights into passenger behavior and product performance.',
       "Set up and interpretation of user behavior analytics on Airlines' websites (A/B testing, Core Web Vitals, Heatmap, rage clicks, excessive scrolling etc).",
-      'Implemented analytics tracking solutions for 10+ Airlines including Finnair, South African, Malaysian Airlines, Avianca, etc. Designed and tested new features and maintained the solution to provide valuable insight to clients.',
-      'Led in communication with the client and coordination with their development team.',
-      "Contributed to the development of Amadeus' Analytics tracking solution (new features + maintenance).",
-      'SAFe methodology (Scaled Agile Framework).',
+      'Designed, tested, and maintained new features for Amadeus’ analytics platform, ensuring reliability and scalability for enterprise clients.',
+      'Bridged between airlines and cross-functional Amadeus teams, leading communication and aligning requirements to ensure successful delivery.',
     ],
     techs: [
       TechName.JS,
@@ -227,10 +231,8 @@ const WorkExperiences = ref<Array<WorkExp>>([
     endDate: new Date('2021-05'),
     description: '',
     tasks: [
-      'Integrated 7+ responsive pages compatible with Firefox, Chrome, IE11 and Edge on the official CMA-CGM website, improving performances and maintaining accessibility for millions of users.',
-      'Validated the design team mockups (feasibility & estimations).',
-      'Bridged the design and development team, enabling mutual understanding and ensuring the match between the product and user requirements.',
-      'Post-delivery support (rework & fixes) for the development and design teams.',
+      'Developed and optimized 7+ responsive, SEO-friendly pages for CMA-CGM’s global website, ensuring cross-browser compatibility (Firefox, Chrome, Edge, IE11) and accessibility for millions of users while validating design mockups for feasibility and UX impact.',
+      'Collaborated closely with design and development teams, facilitating smooth communication and aligning product delivery with user requirements.',
     ],
     techs: [TechName.HTML_SCSS, TechName.VUE],
     id: 3,
@@ -244,13 +246,11 @@ const WorkExperiences = ref<Array<WorkExp>>([
     description: 'In the AIR Digital Customization team',
     tasks: [
       'Worked with AMADEUS in the AIR Digital Customization team:',
-      'Developed a task tracking and visualization tool used worldwide by 400+ users, increasing the transparency and understanding of the workflow for Amadeus employees and clients.',
+      'Developed a task tracking and visualization tool used worldwide by 400+ users, increasing workflow transparency and transparency for Amadeus employees and clients.',
       'Designed and developed the UI of the tool.',
       'Created Docker containers for Backend (PHP), Front-end (Angular), Database (SQL) and logs.',
       'In charge of the implementation of analytics tracking solutions for 10+ Airlines (Google Analytics and Google Tag Manager).',
       'Led in communication with the client and coordination with their development team.',
-      'Designed and tested new features and maintained the Amadeus tracking solution to provide valuable insight to clients.',
-      'SAFe methodology (Scaled Agile Framework).',
     ],
     techs: [
       TechName.ANGULAR,
@@ -272,7 +272,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
     description:
       "My Master's degree end-of-study internship on the subject 'New Interaction Techniques for Athletes'.",
     tasks: [
-      'Developed an Android wearables app to help an Ultimate frisbee team learn game strategies.',
+      'Researched new interaction techniques for athletes, prototyping wearable/tablet interfaces and evaluating effectiveness through user studies.',
       'Conducted user testing to find which modality and language to use to convey directional information. A mix of haptic and visual modalities improved the accuracy and success rate of information.',
     ],
     techs: [TechName.ANDROID, TechName.WEAROS, TechName.JAVA],
@@ -449,6 +449,9 @@ onBeforeUnmount(() => {
       p {
         margin: 0px;
         margin-bottom: 20px;
+        strong {
+          font-weight: bold;
+        }
       }
     }
 
