@@ -167,7 +167,7 @@ const projects = ref<Array<Project>>([
     description:
       'My swim coaching services and how to reach out to me, but also a way for me to create, memorize, and access my lesson plans.',
     image: '../assets/img/task-manager.png',
-    link: '/projects/swim-coach',
+    link: '',
   },
   // {
   //   id: 4,
