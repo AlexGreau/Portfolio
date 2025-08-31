@@ -1,6 +1,7 @@
 <template>
   <article class="card project">
     <a v-if="project.link" :href="project.link" target="_blank">{{ project.name }}</a>
+    <h3 v-else-if="project.name">{{ project.name }}</h3>
     <p>{{ project.description }}</p>
     <ul class="tech-stack">
       <li class="pill" :class="getStatusPillClass(project.status)" v-if="project.status">

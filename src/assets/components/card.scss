@@ -69,6 +69,14 @@
   max-width: 100%;
   width: 100%;
   color: var(--color-on-surface);
+  & > h3 {
+    // same as a link
+    text-decoration: none;
+    color: var(--color-on-surface);
+    font-weight: 600;
+    font-size: 1.25rem;
+    position: relative;
+  }
   & > p {
     margin: 0px;
   }
