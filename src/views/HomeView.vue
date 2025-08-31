@@ -159,15 +159,16 @@ const projects = ref<Array<Project>>([
   //   image: '../assets/img/task-manager.png',
   //   link: '/projects/workout-timer',
   // },
-  // {
-  //   id: 3,
-  //   name: 'Swim coach website',
-  //   techStack: [TechName.VUE, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
-  //   status: Status.TO_DO,
-  //   description: 'My swim coaching services and how to reach out to me.',
-  //   image: '../assets/img/task-manager.png',
-  //   link: '/projects/swim-coach',
-  // },
+  {
+    id: 2,
+    name: 'Swim coach learning website',
+    techStack: [TechName.REACT, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
+    status: Status.IN_PROGRESS,
+    description:
+      'My swim coaching services and how to reach out to me, but also a way for me to create, memorize, and access my lesson plans.',
+    image: '../assets/img/task-manager.png',
+    link: '/projects/swim-coach',
+  },
   // {
   //   id: 4,
   //   name: 'Cook assistant',
@@ -242,7 +243,6 @@ const WorkExperiences = ref<Array<WorkExp>>([
     endDate: new Date('2021-08'),
     description: 'In the AIR Digital Customization team',
     tasks: [
-      'Worked with AMADEUS in the AIR Digital Customization team:',
       'Developed a task tracking and visualization tool used worldwide by 400+ users, increasing workflow transparency and transparency for Amadeus employees and clients.',
       'Designed and developed the UI of the tool.',
       'Created Docker containers for Backend (PHP), Front-end (Angular), Database (SQL) and logs.',
