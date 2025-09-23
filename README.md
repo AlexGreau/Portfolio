@@ -1,6 +1,8 @@
 # Portfolio
 
-My very own portfolio project, thanks for visiting! This Readme explains the setup, the [Tech stack](#tech-stack), [Design decisions](#design-decisions), [Architecture decisions](#architecture-decisions), [Infrastructure](#infrastructure), and finally the [list of other commands available if you run this project locally](#other-commands)
+My very own portfolio project, thanks for visiting! This Readme explains the setup, the [Tech stack](#tech-stack), [Design decisions](#design-decisions), [Architecture decisions](#architecture-decisions), [Infrastructure](#infrastructure), and finally the [list of other commands available if you run this project locally](#other-commands).
+
+The website itself is reachable at [https://alexgreau.github.io/Portfolio/](https://alexgreau.github.io/Portfolio/)
 
 ## Project Setup
 
