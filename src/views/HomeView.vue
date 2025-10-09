@@ -317,7 +317,7 @@ onBeforeUnmount(() => {
   padding: 0rem 1.5rem;
   & > section.hero-wrapper {
     padding-bottom: 20px;
-    padding-top: 6rem;
+    padding-top: 4rem;
     display: flex;
     flex-wrap: nowrap;
     flex: 0 1 40%;
@@ -326,7 +326,7 @@ onBeforeUnmount(() => {
     position: sticky;
     top: 2rem;
     align-self: self-start;
-    max-height: calc(100vh - 6rem);
+    max-height: calc(100vh - 4rem);
     h1 {
       margin-bottom: 0px;
       // override default font size
@@ -436,7 +436,7 @@ onBeforeUnmount(() => {
 
   & > div.content-wrapper {
     flex: 1 1 50%;
-    padding-top: 8rem;
+    padding-top: 7rem;
     & > section.about-wrapper {
       margin-bottom: 20px;
       padding: 0px;
