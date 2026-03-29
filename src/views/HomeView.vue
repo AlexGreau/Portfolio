@@ -150,17 +150,18 @@ const projects = ref<Array<Project>>([
     image: '../assets/img/portfolio.png',
     link: 'https://github.com/AlexGreau/Portfolio',
   },
-  // {
-  //   id: 2,
-  //   name: 'Workout timer',
-  //   techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
-  //   status: Status.IN_PROGRESS,
-  //   description: 'A workout helper to plan and execute your workouts.',
-  //   image: '../assets/img/task-manager.png',
-  //   link: '/projects/workout-timer',
-  // },
   {
     id: 2,
+    name: 'Raspberry Pi Telegram Bot',
+    techStack: [TechName.PYTHON, TechName.RASPBERRY_PI],
+    status: Status.COMPLETED,
+    description:
+      'A self-hosted Telegram bot running on Raspberry Pi with modular command handlers—exploring hardware capabilities while building practical daily tools like a Scrabble word validator.',
+    image: '../assets/img/task-manager.png',
+    link: '',
+  },
+  {
+    id: 3,
     name: 'Swim coach learning website',
     techStack: [TechName.REACT, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
     status: Status.IN_PROGRESS,
@@ -177,6 +178,15 @@ const projects = ref<Array<Project>>([
   //   description: 'A cooking assistant to help you cook your meals.',
   //   image: '../assets/img/task-manager.png',
   //   link: '/projects/cook-assistant',
+  // },
+  // {
+  //   id: 2,
+  //   name: 'Workout timer',
+  //   techStack: [TechName.REACT, TechName.TS, TechName.FIGMA, TechName.AWS, TechName.HTML_SCSS],
+  //   status: Status.IN_PROGRESS,
+  //   description: 'A workout helper to plan and execute your workouts.',
+  //   image: '../assets/img/task-manager.png',
+  //   link: '/projects/workout-timer',
   // },
 ])
 
