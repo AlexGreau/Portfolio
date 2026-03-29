@@ -31,4 +31,6 @@ export enum TechName {
   ADOBE = 'Adobe Analytics',
   CLARITY = 'Clarity',
   DOCKER = 'Docker',
+  PYTHON = 'Python',
+  RASPBERRY_PI = 'Raspberry Pi 4',
 }
