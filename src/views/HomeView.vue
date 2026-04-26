@@ -153,10 +153,10 @@ const projects = ref<Array<Project>>([
   {
     id: 2,
     name: 'Raspberry Pi Telegram Bot',
-    techStack: [TechName.PYTHON, TechName.RASPBERRY_PI],
+    techStack: [TechName.PYTHON, TechName.CLAUDE_API, TechName.RASPBERRY_PI],
     status: Status.COMPLETED,
     description:
-      'A self-hosted Telegram bot running on Raspberry Pi with modular command handlers—exploring hardware capabilities while building practical daily tools like a Scrabble word validator.',
+      'A self-hosted personal assistant running on a Raspberry Pi. Instead of switching between apps, I send one message in plain English—Claude parses the intent, extracts structured data, and routes it to the right backend. Currently connected to Google Sheets and Notion for logging meals, expenses, workouts, and tasks. The architecture is extensible by design: any app with an API is a potential destination.',
     image: '../assets/img/task-manager.png',
     link: '',
   },

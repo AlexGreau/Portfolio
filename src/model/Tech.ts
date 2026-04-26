@@ -33,4 +33,5 @@ export enum TechName {
   DOCKER = 'Docker',
   PYTHON = 'Python',
   RASPBERRY_PI = 'Raspberry Pi 4',
+  CLAUDE_API = 'Claude API',
 }
