@@ -25,7 +25,7 @@
       <ul>
         <li>
           <a
-            href="https://drive.google.com/file/d/1tHHf81msFeb6vQJZ8BRqUabEp9Md0flc/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Ds7urI-dmnMsZAkyBG2hGVGgikUTIbSh/view?usp=sharing"
             target="_blank"
           >
             <!-- inline since it has semantic value + color changes-->
@@ -160,16 +160,16 @@ const projects = ref<Array<Project>>([
     image: '../assets/img/task-manager.png',
     link: '',
   },
-  {
-    id: 3,
-    name: 'Swim coach learning website',
-    techStack: [TechName.REACT, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
-    status: Status.IN_PROGRESS,
-    description:
-      'My swim coaching services and how to reach out to me, but also a way for me to create, memorize, and access my lesson plans.',
-    image: '../assets/img/task-manager.png',
-    link: '',
-  },
+  // {
+  //   id: 3,
+  //   name: 'Swim coach learning website',
+  //   techStack: [TechName.REACT, TechName.SCSS, TechName.HTML_SCSS, TechName.TS],
+  //   status: Status.IN_PROGRESS,
+  //   description:
+  //     'My swim coaching services and how to reach out to me, but also a way for me to create, memorize, and access my lesson plans.',
+  //   image: '../assets/img/task-manager.png',
+  //   link: '',
+  // },
   // {
   //   id: 4,
   //   name: 'Cook assistant',
@@ -194,35 +194,43 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Product Engineer (Frontend-focused)',
+    position: 'Senior Software engineer - Frontend / Product',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
-    description: 'Enabling merchant to accept crypto payments.',
+    description: 'Enabling merchants to accept crypto payments.',
     tasks: [
-      'Delivered and later took ownership of a client-facing dashboard (3k+ merchants, 5k+ active users, 200k+ crypto transactions/month), contributing to a +72% revenue increase and leading a major refactor for scalability, maintainability, and UX.',
-      'Collaborated with back-end engineers to redesign APIs and optimize data flows, ensuring system resilience under high transaction volumes.',
-      'Enhanced UX and performance of payment gateways, boosting conversion by 30%.',
-      'Driving innovation through A/B testing and user experiments, fostering data-driven decision-making.',
+      'Sole frontend engineer for 1+ years within a 50-person engineering org, owning, modernizing and scaling the merchant dashboard (3k+ merchants, 5k+ monthly active users, 200k+ crypto transactions/month, +72% revenue).',
+      'Redesigned payment gateway workflows and client integration layers, boosting checkout conversion by 30%.',
+      'Partnered with backend engineers to review API specifications and data payloads for new features, ensuring clean frontend integration and interface performance.',
+      'Implemented A/B testing and telemetry frameworks to evaluate user behaviour and validate feature rollouts, fostering data-driven decision-making.',
     ],
-    techs: [TechName.VUE, TechName.SVELTE, TechName.TS, TechName.HTML_SCSS, TechName.GTM],
+    techs: [
+      TechName.TS,
+      TechName.VUE,
+      TechName.SVELTEKIT,
+      TechName.HTML_SCSS,
+      TechName.PLAYWRIGHT,
+      TechName.GTM,
+      TechName.GRAFANA,
+    ],
     id: 1,
   },
   {
     company: 'Amadeus',
-    position: 'Data Analyst',
+    position: 'Software engineer - Analytics',
     link: 'https://www.amadeus.com/',
     startDate: new Date('2021-05'),
     endDate: new Date('2022-05'),
     description: 'In the AIR Digital Analytics team (second time)',
     tasks: [
-      'Delivered analytics tracking solutions for 10+ international airlines (including Finnair, South African Airways, Avianca, and Malaysian Airlines), providing actionable insights into passenger behavior and product performance.',
-      "Set up and interpretation of user behavior analytics on Airlines' websites (A/B testing, Core Web Vitals, Heatmap, rage clicks, excessive scrolling etc).",
-      'Designed, tested, and maintained new features for Amadeus’ analytics platform, ensuring reliability and scalability for enterprise clients.',
-      'Bridged between airlines and cross-functional Amadeus teams, leading communication and aligning requirements to ensure successful delivery.',
+      'Built custom frontend analytics and event tracking pipelines for 10+ international airlines (Finnair, South African Airways, Avianca, Malaysian Airlines), translating passenger booking funnel data into actionable product metrics.',
+      "Set up and interpreted user behaviour analytics on airlines' websites (A/B testing, Core Web Vitals, heatmaps, rage clicks, excessive scrolling).",
+      "Designed, unit-tested and maintained features for Amadeus' enterprise analytics platform, ensuring reliability and scalability.",
+      'Acted as technical interface between airline partners and internal core engineering teams to align system specifications and delivery.',
     ],
     techs: [
-      TechName.JS,
       TechName.TS,
+      TechName.JS,
       TechName.JEST,
       TechName.GA,
       TechName.GTM,
@@ -233,35 +241,36 @@ const WorkExperiences = ref<Array<WorkExp>>([
   },
   {
     company: 'CMA-CGM',
-    position: 'Web integrator',
+    position: 'Software engineer - Web',
     link: 'https://www.cma-cgm.com/',
     startDate: new Date('2020-08'),
     endDate: new Date('2021-05'),
     description: '',
     tasks: [
-      'Developed and optimized 7+ responsive, SEO-friendly pages for CMA-CGM’s global website, ensuring cross-browser compatibility (Firefox, Chrome, Edge, IE11) and accessibility for millions of users while validating design mockups for feasibility and UX impact.',
+      "Developed and optimized 7+ responsive, high-performance and SEO-compliant core web modules for CMA-CGM's global website, serving millions of users.",
+      'Ensured cross-browser compatibility (Firefox, Chrome, Edge, IE11) and accessibility, while validating design specs for UX feasibility.',
       'Collaborated closely with design and development teams, facilitating smooth communication and aligning product delivery with user requirements.',
     ],
-    techs: [TechName.HTML_SCSS, TechName.VUE],
+    techs: [TechName.HTML_SCSS, TechName.VUE, TechName.KENDO_UI],
     id: 3,
   },
   {
     company: 'Amadeus',
-    position: 'Full-stack engineer',
+    position: 'Software engineer - Fullstack',
     link: 'https://www.amadeus.com/',
     startDate: new Date('2019-10'),
-    endDate: new Date('2021-08'),
+    endDate: new Date('2020-07'),
     description: 'In the AIR Digital Customization team',
     tasks: [
-      'Developed a task tracking and visualization tool used worldwide by 400+ users, increasing workflow transparency and transparency for Amadeus employees and clients.',
+      'Co-engineered an internal workflow and tracking application in a 2-person team, deploying features used by 400+ employees and global clients and significantly increasing operational transparency.',
       'Designed and developed the UI of the tool.',
-      'Created Docker containers for Backend (PHP), Front-end (Angular), Database (SQL) and logs.',
-      'In charge of the implementation of analytics tracking solutions for 10+ Airlines (Google Analytics and Google Tag Manager).',
-      'Led in communication with the client and coordination with their development team.',
+      'Created Docker containers for backend (PHP), frontend (Angular), database (SQL) and logs.',
+      'Implemented analytics tracking solutions for 10+ airlines (Google Analytics and Google Tag Manager).',
+      'Led communication with the client and coordination with their development team.',
     ],
     techs: [
       TechName.ANGULAR,
-      TechName.JS,
+      TechName.TS,
       TechName.JEST,
       TechName.LARAVEL,
       TechName.DOCKER,
@@ -272,14 +281,14 @@ const WorkExperiences = ref<Array<WorkExp>>([
   },
   {
     company: 'SUTD (University)',
-    position: 'Research officer',
+    position: 'Human-Computer Interaction research officer',
     link: 'https://www.sutd.edu.sg/',
-    startDate: new Date('2020-04'),
-    endDate: new Date('2021-09'),
+    startDate: new Date('2019-04'),
+    endDate: new Date('2019-09'),
     description:
       "My Master's degree end-of-study internship on the subject 'New Interaction Techniques for Athletes'.",
     tasks: [
-      'Researched new interaction techniques for athletes, prototyping wearable/tablet interfaces and evaluating effectiveness through user studies.',
+      'Prototyped interactive tablet and wearable interfaces for athletic data tracking, evaluating their performance through quantitative user studies.',
       'Conducted user testing to find which modality and language to use to convey directional information. A mix of haptic and visual modalities improved the accuracy and success rate of information.',
     ],
     techs: [TechName.ANDROID, TechName.WEAROS, TechName.JAVA],
