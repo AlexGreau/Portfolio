@@ -2,8 +2,11 @@
   <main class="main-wrapper" id="top">
     <section class="hero-wrapper">
       <h1>Alexandre Gréau</h1>
-      <h2>Front-end engineer</h2>
-      <p>I build accessible, performant and user-friendly apps for the web.</p>
+      <h2>Product engineer</h2>
+      <p>
+        I find user problems and ship the fix end to end — from research to frontend, integrations
+        and measuring the result.
+      </p>
       <nav>
         <ul>
           <li>
@@ -105,9 +108,9 @@
 
         <p>
           I approach problems from the <strong>user’s perspective</strong> and aim for solutions
-          that balance design and engineering. This mindset led me into
-          <strong>product engineering</strong>, where I learned how technical choices impact real
-          outcomes.
+          that balance design and engineering. Today I work as a <strong>product engineer</strong>:
+          I own features from the user problem to release. I work <strong>AI-native</strong>, using
+          Claude Code every day and building LLM features with the Claude API.
         </p>
 
         <p>
@@ -156,7 +159,7 @@ const projects = ref<Array<Project>>([
     techStack: [TechName.PYTHON, TechName.CLAUDE_API, TechName.RASPBERRY_PI],
     status: Status.COMPLETED,
     description:
-      'A self-hosted personal assistant running on a Raspberry Pi. Instead of switching between apps, I send one message in plain English—Claude parses the intent, extracts structured data, and routes it to the right backend. Currently connected to Google Sheets and Notion for logging meals, expenses, workouts, and tasks. The architecture is extensible by design: any app with an API is a potential destination.',
+      'A self-hosted personal assistant on a Raspberry Pi. I send one plain-English message; Claude parses the intent and extracts structured data, and a Python backend routes it to Google Sheets or Notion (meals, expenses, workouts, tasks). Built so any app with an API can be plugged in as a new destination.',
     image: '../assets/img/task-manager.png',
     link: '',
   },
@@ -203,6 +206,8 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Redesigned payment gateway workflows and client integration layers, boosting checkout conversion by 30%.',
       'Partnered with backend engineers to review API specifications and data payloads for new features, ensuring clean frontend integration and interface performance.',
       'Implemented A/B testing and telemetry frameworks to evaluate user behaviour and validate feature rollouts, fostering data-driven decision-making.',
+      'Selected DaisyUI as the component library for its small footprint and support, after evaluating shadcn (React-only at the time; the Svelte port lacked components we needed).',
+      'Building native wallet support and smart-contract integration into the payment form (in progress); scoped the delivery options and risks in a decision doc so the team could ship an MVP on the legacy stack.',
     ],
     techs: [
       TechName.TS,
