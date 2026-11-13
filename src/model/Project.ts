@@ -8,5 +8,4 @@ export interface Project {
   techStack: TechName[]
   link?: string
   description?: string
-  image?: string
 }

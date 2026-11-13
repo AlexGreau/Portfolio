@@ -2,8 +2,11 @@
   <main class="main-wrapper" id="top">
     <section class="hero-wrapper">
       <h1>Alexandre Gréau</h1>
-      <h2>Front-end engineer</h2>
-      <p>I build accessible, performant and user-friendly apps for the web.</p>
+      <h2>Senior product engineer</h2>
+      <p>
+        Frontend-focused. I find user problems and ship the fix end to end — from research to UI,
+        integrations and measuring the result.
+      </p>
       <nav>
         <ul>
           <li>
@@ -20,7 +23,7 @@
         </ul>
       </nav>
       <figure>
-        <img :src="profilePic" loading="lazy" class="profile-pic" alt="profile picture" />
+        <img :src="profilePic" class="profile-pic" alt="Alexandre Gréau" />
       </figure>
       <ul>
         <li>
@@ -91,7 +94,6 @@
             LinkedIn
           </a>
         </li>
-        <li></li>
       </ul>
     </section>
     <div class="content-wrapper">
@@ -105,9 +107,9 @@
 
         <p>
           I approach problems from the <strong>user’s perspective</strong> and aim for solutions
-          that balance design and engineering. This mindset led me into
-          <strong>product engineering</strong>, where I learned how technical choices impact real
-          outcomes.
+          that balance design and engineering. Today I work as a <strong>product engineer</strong>:
+          I own features from the user problem to release, then monitor their impact with analytics,
+          A/B tests and telemetry.
         </p>
 
         <p>
@@ -147,7 +149,6 @@ const projects = ref<Array<Project>>([
     techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
     status: Status.COMPLETED,
     description: 'A personal portfolio website to showcase my projects and skills.',
-    image: '../assets/img/portfolio.png',
     link: 'https://github.com/AlexGreau/Portfolio',
   },
   {
@@ -156,8 +157,7 @@ const projects = ref<Array<Project>>([
     techStack: [TechName.PYTHON, TechName.CLAUDE_API, TechName.RASPBERRY_PI],
     status: Status.COMPLETED,
     description:
-      'A self-hosted personal assistant running on a Raspberry Pi. Instead of switching between apps, I send one message in plain English—Claude parses the intent, extracts structured data, and routes it to the right backend. Currently connected to Google Sheets and Notion for logging meals, expenses, workouts, and tasks. The architecture is extensible by design: any app with an API is a potential destination.',
-    image: '../assets/img/task-manager.png',
+      'A self-hosted personal assistant on a Raspberry Pi. I send one plain-English message; Claude parses the intent and extracts structured data, and a Python backend routes it to Google Sheets or Notion (meals, expenses, workouts, tasks). Built so any app with an API can be plugged in as a new destination.',
     link: '',
   },
   // {
@@ -194,7 +194,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Senior Software engineer - Frontend / Product',
+    position: 'Senior Software Engineer - Frontend / Product',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
     description: 'Enabling merchants to accept crypto payments.',
@@ -203,6 +203,8 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Redesigned payment gateway workflows and client integration layers, boosting checkout conversion by 30%.',
       'Partnered with backend engineers to review API specifications and data payloads for new features, ensuring clean frontend integration and interface performance.',
       'Implemented A/B testing and telemetry frameworks to evaluate user behaviour and validate feature rollouts, fostering data-driven decision-making.',
+      'Building native wallet support and smart-contract integration into the payment form (in progress); scoped the delivery options and risks in a decision doc so the team could ship an MVP on the legacy stack.',
+      'Adopted Claude Code in my daily workflow to ship faster, while still scoping each problem, reviewing every change and owning what ships.',
     ],
     techs: [
       TechName.TS,
@@ -221,7 +223,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
     link: 'https://www.amadeus.com/',
     startDate: new Date('2021-05'),
     endDate: new Date('2022-05'),
-    description: 'In the AIR Digital Analytics team (second time)',
+    description: 'In the AIR Digital Analytics team',
     tasks: [
       'Built custom frontend analytics and event tracking pipelines for 10+ international airlines (Finnair, South African Airways, Avianca, Malaysian Airlines), translating passenger booking funnel data into actionable product metrics.',
       "Set up and interpreted user behaviour analytics on airlines' websites (A/B testing, Core Web Vitals, heatmaps, rage clicks, excessive scrolling).",
