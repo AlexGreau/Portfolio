@@ -108,7 +108,8 @@
         <p>
           I approach problems from the <strong>user’s perspective</strong> and aim for solutions
           that balance design and engineering. Today I work as a <strong>product engineer</strong>:
-          I own features from the user problem to release.
+          I own features from the user problem to release, then monitor their impact with analytics,
+          A/B tests and telemetry.
         </p>
 
         <p>
