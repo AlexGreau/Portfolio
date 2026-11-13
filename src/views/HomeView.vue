@@ -112,12 +112,6 @@
         </p>
 
         <p>
-          I use <strong>AI as a tool, not a replacement</strong>. Claude Code speeds up the work,
-          but I scope the problem, review every change and own what ships. I also build with LLMs,
-          like my Raspberry Pi assistant on the Claude API.
-        </p>
-
-        <p>
           Outside work, I’m a <strong>swim coach</strong> and former competitive swimmer. Teaching
           kids has taught me patience and clear communication—skills I bring to every project.
         </p>
@@ -209,6 +203,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Partnered with backend engineers to review API specifications and data payloads for new features, ensuring clean frontend integration and interface performance.',
       'Implemented A/B testing and telemetry frameworks to evaluate user behaviour and validate feature rollouts, fostering data-driven decision-making.',
       'Building native wallet support and smart-contract integration into the payment form (in progress); scoped the delivery options and risks in a decision doc so the team could ship an MVP on the legacy stack.',
+      'Adopted Claude Code in my daily workflow to ship faster, while still scoping each problem, reviewing every change and owning what ships.',
     ],
     techs: [
       TechName.TS,
