@@ -108,8 +108,13 @@
         <p>
           I approach problems from the <strong>user’s perspective</strong> and aim for solutions
           that balance design and engineering. Today I work as a <strong>product engineer</strong>:
-          I own features from the user problem to release. I work <strong>AI-native</strong>, using
-          Claude Code every day and building LLM features with the Claude API.
+          I own features from the user problem to release.
+        </p>
+
+        <p>
+          I use <strong>AI as a tool, not a replacement</strong>. Claude Code speeds up the work,
+          but I scope the problem, review every change and own what ships. I also build with LLMs,
+          like my Raspberry Pi assistant on the Claude API.
         </p>
 
         <p>
