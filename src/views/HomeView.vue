@@ -2,10 +2,10 @@
   <main class="main-wrapper" id="top">
     <section class="hero-wrapper">
       <h1>Alexandre Gréau</h1>
-      <h2>Product engineer</h2>
+      <h2>Senior product engineer</h2>
       <p>
-        I find user problems and ship the fix end to end — from research to frontend, integrations
-        and measuring the result.
+        Frontend-focused. I find user problems and ship the fix end to end — from research to UI,
+        integrations and measuring the result.
       </p>
       <nav>
         <ul>
@@ -23,7 +23,7 @@
         </ul>
       </nav>
       <figure>
-        <img :src="profilePic" loading="lazy" class="profile-pic" alt="profile picture" />
+        <img :src="profilePic" class="profile-pic" alt="Alexandre Gréau" />
       </figure>
       <ul>
         <li>
@@ -94,7 +94,6 @@
             LinkedIn
           </a>
         </li>
-        <li></li>
       </ul>
     </section>
     <div class="content-wrapper">
@@ -150,7 +149,6 @@ const projects = ref<Array<Project>>([
     techStack: [TechName.VUE, TechName.HTML_SCSS, TechName.TS],
     status: Status.COMPLETED,
     description: 'A personal portfolio website to showcase my projects and skills.',
-    image: '../assets/img/portfolio.png',
     link: 'https://github.com/AlexGreau/Portfolio',
   },
   {
@@ -160,7 +158,6 @@ const projects = ref<Array<Project>>([
     status: Status.COMPLETED,
     description:
       'A self-hosted personal assistant on a Raspberry Pi. I send one plain-English message; Claude parses the intent and extracts structured data, and a Python backend routes it to Google Sheets or Notion (meals, expenses, workouts, tasks). Built so any app with an API can be plugged in as a new destination.',
-    image: '../assets/img/task-manager.png',
     link: '',
   },
   // {
@@ -197,7 +194,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
   {
     company: 'Triple-A',
     link: 'https://triple-a.io/',
-    position: 'Senior Software engineer - Frontend / Product',
+    position: 'Senior Software Engineer - Frontend / Product',
     startDate: new Date('2022-06-06'),
     endDate: undefined,
     description: 'Enabling merchants to accept crypto payments.',
@@ -206,7 +203,6 @@ const WorkExperiences = ref<Array<WorkExp>>([
       'Redesigned payment gateway workflows and client integration layers, boosting checkout conversion by 30%.',
       'Partnered with backend engineers to review API specifications and data payloads for new features, ensuring clean frontend integration and interface performance.',
       'Implemented A/B testing and telemetry frameworks to evaluate user behaviour and validate feature rollouts, fostering data-driven decision-making.',
-      'Selected DaisyUI as the component library for its small footprint and support, after evaluating shadcn (React-only at the time; the Svelte port lacked components we needed).',
       'Building native wallet support and smart-contract integration into the payment form (in progress); scoped the delivery options and risks in a decision doc so the team could ship an MVP on the legacy stack.',
     ],
     techs: [
@@ -226,7 +222,7 @@ const WorkExperiences = ref<Array<WorkExp>>([
     link: 'https://www.amadeus.com/',
     startDate: new Date('2021-05'),
     endDate: new Date('2022-05'),
-    description: 'In the AIR Digital Analytics team (second time)',
+    description: 'In the AIR Digital Analytics team',
     tasks: [
       'Built custom frontend analytics and event tracking pipelines for 10+ international airlines (Finnair, South African Airways, Avianca, Malaysian Airlines), translating passenger booking funnel data into actionable product metrics.',
       "Set up and interpreted user behaviour analytics on airlines' websites (A/B testing, Core Web Vitals, heatmaps, rage clicks, excessive scrolling).",
